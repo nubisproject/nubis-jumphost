@@ -1,0 +1,4 @@
+# Place base dir location here
+
+BASE_DIR="${HOME}/nubis"
+PROJECT_DIR="${BASE_DIR}/nubis-projectname"
