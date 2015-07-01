@@ -1,0 +1,22 @@
+[
+  {
+    "ParameterKey": "ServiceName",
+    "ParameterValue": "yourservicename"
+  },
+  {
+    "ParameterKey": "Environment",
+    "ParameterValue": "sandbox"
+  },
+  {
+    "ParameterKey": "KeyName",
+    "ParameterValue": "key"
+  },
+  {
+    "ParameterKey": "TechnicalOwner",
+    "ParameterValue": "email"
+  },
+  {
+    "ParameterKey": "AmiId",
+    "ParameterValue": "ami-abcdef123"
+  }
+]

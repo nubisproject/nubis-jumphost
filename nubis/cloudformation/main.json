@@ -1,0 +1,51 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "Cloudformation template for nubis-jumphost deployment",
+  "Parameters": {
+    "ServiceName": {
+      "Description": "Name of the service",
+      "Type": "String"
+    },
+    "Environment": {
+      "Description": "Environment we are deploying into",
+      "Default": "sandbox",
+      "Type": "String",
+      "AllowedValues": [
+        "prod",
+        "stage",
+        "sandbox"
+      ],
+      "ConstraintDescription": "Must specify prod, stage, or sandbox."
+    },
+    "BaseZone": {
+      "Description": "Base zone to create route53 zone in",
+      "Default": "nubis.allizom.org",
+      "Type": "String"
+    },
+    "KeyName": {
+      "Description": "Existing ssh key to deploy to EC2 instances",
+      "Type": "String"
+    },
+    "TechnicalOwner": {
+      "Description": "A valid LDAP email",
+      "Type": "String"
+    },
+    "AmiId": {
+      "Description": "The id of the ami for this region",
+      "Type": "String"
+    }
+  },
+  "Mappings": {
+    "InstanceTypeMap": {
+      "prod": {
+        "InstanceType": "m3.large"
+      },
+      "stage": {
+        "InstanceType": "m3.medium"
+      },
+      "sandbox": {
+        "InstanceType": "m3.medium"
+      }
+    }
+  }
+}
