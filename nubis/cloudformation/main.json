@@ -81,23 +81,37 @@
               },
               "InstanceType"
             ]
+          },
+          "ELB": {
+            "Fn::GetAtt": [
+              "ELBStack",
+              "Outputs.ELB"
+            ]
           }
+        }
+      }
+    },
+    "ELBStack": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/nubisproject-stacks/master/elb.template",
+        "TimeoutInMinutes": "60",
+        "Parameters": {
+          "ServiceName": {
+            "Ref": "ServiceName"
+          },
+          "TechnicalOwner": {
+            "Ref": "TechnicalOwner"
+          },
+          "Environment": {
+            "Ref": "Environment"
+          },
+          "ElbHealthTarget": "HTTP:80/"
         }
       }
     },
     "ElasticIP": {
       "Type": "AWS::EC2::EIP"
-    },
-    "EIPAssociation": {
-      "Type": "AWS::EC2::EIPAssociation",
-      "Properties": {
-        "InstanceId": {
-          "Ref": "EC2Stack"
-        },
-        "EIP": {
-          "Ref": "ElasticIP"
-        }
-      }
     }
   },
   "Outputs": {
