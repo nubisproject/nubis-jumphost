@@ -22,7 +22,7 @@
       "Default": "nubis.allizom.org",
       "Type": "String"
     },
-    "KeyName": {
+    "SSHKeyName": {
       "Description": "Existing ssh key to deploy to EC2 instances",
       "Type": "String"
     },
@@ -70,8 +70,8 @@
           "AmiId": {
             "Ref": "AmiId"
           },
-          "KeyName": {
-            "Ref": "KeyName"
+          "SSHKeyName": {
+            "Ref": "SSHKeyName"
           },
           "InstanceType": {
             "Fn::FindInMap": [
@@ -84,6 +84,20 @@
           }
         }
       }
+    },
+    "ElasticIP": {
+      "Type": "AWS::EC2::EIP"
+    },
+    "EIPAssociation": {
+      "Type": "AWS::EC2::EIPAssociation",
+      "Properties": {
+        "InstanceId": {
+          "Ref": "EC2Stack"
+        },
+        "EIP": {
+          "Ref": "ElasticIP"
+        }
+      }
     }
   },
   "Outputs": {
@@ -91,7 +105,7 @@
       "Description": "Consul: config/ Instance ID",
       "Value": {
         "Fn::GetAtt": [
-          "EC2Stacks",
+          "EC2Stack",
           "Outputs.InstanceId"
         ]
       }
