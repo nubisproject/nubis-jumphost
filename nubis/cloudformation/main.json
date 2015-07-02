@@ -47,5 +47,54 @@
         "InstanceType": "m3.medium"
       }
     }
+  },
+  "Resources": {
+    "EC2Stack": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/nubisproject-stacks/master/ec2.template",
+        "TimeoutInMinutes": "60",
+        "Parameters": {
+          "StackName": {
+            "Ref": "AWS::StackName"
+          },
+          "ServiceName": {
+            "Ref": "ServiceName"
+          },
+          "TechnicalOwner": {
+            "Ref": "TechnicalOwner"
+          },
+          "Environment": {
+            "Ref": "Environment"
+          },
+          "AmiId": {
+            "Ref": "AmiId"
+          },
+          "KeyName": {
+            "Ref": "KeyName"
+          },
+          "InstanceType": {
+            "Fn::FindInMap": [
+              "InstanceTypeMap",
+              {
+                "Ref": "Environment"
+              },
+              "InstanceType"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "Outputs": {
+    "InstanceId": {
+      "Description": "Consul: config/ Instance ID",
+      "Value": {
+        "Fn::GetAtt": [
+          "EC2Stacks",
+          "Outputs.InstanceId"
+        ]
+      }
+    }
   }
 }
