@@ -123,6 +123,15 @@
           "Outputs.InstanceId"
         ]
       }
+    },
+    "ElasticIP": {
+      "Description": "Consul: config/ Elastic IP",
+      "Value": {
+        "Fn::GetAtt": [
+          "ElasticIP",
+          "Outputs.AllocationId"
+        ]
+      }
     }
   }
 }
