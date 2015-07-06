@@ -121,7 +121,7 @@
             "-",
             [
               {
-                "Ref": "StackName"
+                "Ref": "AWS::StackName"
               },
               "eip",
               "associate",
