@@ -112,6 +112,39 @@
     },
     "EIP": {
       "Type": "AWS::EC2::EIP"
+    },
+    "EC2AssociatePolicy": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyName": {
+          "Fn::Join": [
+            "-",
+            [
+              {
+                "Ref": "StackName"
+              },
+              "eip",
+              "associate",
+              "policy"
+            ]
+          ]
+        },
+        "PolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Action": [
+                "ec2:AssociateAddress",
+                "ec2:DisassociateAddress"
+              ],
+              "Resource": {
+                "Ref": "EC2Stack"
+              }
+            }
+          ]
+        }
+      }
     }
   },
   "Outputs": {
