@@ -163,9 +163,7 @@
                 "ec2:AssociateAddress",
                 "ec2:DisassociateAddress"
               ],
-              "Resource": {
-                 "Ref": "EIP"
-              }
+              "Resource": "*"
             }
           ]
         },
