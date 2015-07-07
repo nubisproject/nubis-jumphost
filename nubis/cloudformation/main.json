@@ -148,8 +148,9 @@
               {
                 "Ref": "StackName"
               },
-              "storage",
-              "backup"
+              "eip",
+              "associate",
+              "policy"
             ]
           ]
         },
