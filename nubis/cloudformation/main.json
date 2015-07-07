@@ -73,6 +73,9 @@
           "SSHKeyName": {
             "Ref": "SSHKeyName"
           },
+          "IamInstanceProfile": {
+            "Ref": "EIPInstanceProfile"
+          },
           "InstanceType": {
             "Fn::FindInMap": [
               "InstanceTypeMap",
@@ -113,7 +116,29 @@
     "EIP": {
       "Type": "AWS::EC2::EIP"
     },
-    "EC2AssociatePolicy": {
+    "EIPRole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Principal": {
+                "Service": [
+                  "ec2.amazonaws.com"
+                ]
+              },
+              "Action": [
+                "sts:AssumeRole"
+              ]
+            }
+          ]
+        },
+        "Path": "/"
+      }
+    },
+    "EIPRolePolicies": {
       "Type": "AWS::IAM::Policy",
       "Properties": {
         "PolicyName": {
@@ -139,20 +164,27 @@
                 "ec2:DisassociateAddress"
               ],
               "Resource": {
-                "Fn::Join": [
-                  "",
-                  [
-                    "arn:aws:ec2:::",
-                    "/instance/",
-                    {
-                      "Ref": "EC2Stack"
-                    }
-                  ]
-                ]
+                 "Ref": "EIP"
               }
             }
           ]
-        }
+        },
+        "Roles": [
+          {
+            "Ref": "EIPRole"
+          }
+        ]
+      }
+    },
+    "EIPInstanceProfile": {
+      "Type": "AWS::IAM::InstanceProfile",
+      "Properties": {
+        "Path": "/",
+        "Roles": [
+          {
+            "Ref": "EIPRole"
+          }
+        ]
       }
     }
   },
