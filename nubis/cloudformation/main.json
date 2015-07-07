@@ -139,7 +139,16 @@
                 "ec2:DisassociateAddress"
               ],
               "Resource": {
-                "Ref": "EC2Stack"
+                "Fn::Join": [
+                  "",
+                  [
+                    "arn:aws:ec2:::",
+                    "/instance/",
+                    {
+                      "Ref": "EC2Stack"
+                    }
+                  ]
+                ]
               }
             }
           ]
