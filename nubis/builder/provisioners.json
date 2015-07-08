@@ -1,0 +1,19 @@
+{
+  "provisioners": [
+    {
+      "type": "file",
+      "source": "nubis/bin/migrate",
+      "destination": "/tmp/migrate",
+      "order": "11"
+    },
+    {
+      "type": "shell",
+      "inline": [
+        "sudo mv /tmp/migrate /etc/nubis.d/migrate",
+        "sudo chown root:root /etc/nubis.d/migrate",
+        "sudo chmod 755 /etc/nubis.d/migrate"
+      ],
+      "order": "12"
+    }
+  ]
+}
