@@ -17,7 +17,7 @@ else
 fi
 
 # Source the consul connection details from the metadata api
-eval `curl -fq http://169.254.169.254/latest/user-data`
+eval `curl -s -fq http://169.254.169.254/latest/user-data`
 
 # Check to see if NUBIS_MIGRATE was set in userdata. If not we exit quietly.
 if [ ${NUBIS_MIGRATE:-0} == '0' ]; then
@@ -73,8 +73,8 @@ while [ "$KEYS_UP" != "0" ]; do
 done
 
 elasticip_id=$(curl -s $CONSUL/ElasticIP?raw=1)
-instance_id=$(curl -fq http://169.254.169.254/latest/meta-data/instance-id)
-local_ip=$(curl -fq http://169.254.169.254/latest/meta-data/local-ipv4)
+instance_id=$(curl -s -fq http://169.254.169.254/latest/meta-data/instance-id)
+local_ip=$(curl -s -fq http://169.254.169.254/latest/meta-data/local-ipv4)
 
 EC2_AVAIL_ZONE=`curl -s http://169.254.169.254/latest/meta-data/placement/availability-zone`
 EC2_REGION="`echo \"$EC2_AVAIL_ZONE\" | sed -e 's:\([0-9][0-9]*\)[a-z]*\$:\\1:'`"
