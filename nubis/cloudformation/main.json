@@ -235,7 +235,7 @@
     },
     "JumphostARecord": {
       "Type": "AWS::Route53::RecordSet",
-      "DependsOn": "JumphstHostedZone",
+      "DependsOn": [ "JumphostHostedZone", "EIP", "EC2Stack" ],
       "Properties": {
         "Type": "A",
         "Comment": "A record jumphost that points to EIP",
@@ -269,14 +269,7 @@
             ]
           ]
         },
-        "ResourceRecords": [
-          {
-            "Fn::GetAtt": [
-              "EC2Stack",
-              "PublicIp"
-            ]
-          }
-        ]
+        "ResourceRecords": { "Ref": "EIP" }
       }
     }
   },
