@@ -7,7 +7,7 @@ Builds out a nubis jumphost and associates an elastic IP for the ec2 instance
 1. Build AMI
     ```bash
     $ vim ./nubis/builder/project.json
-    $ ./bin/packer-build.sh
+    $ ./bin/build-ami.sh
     ```
 
 2. Edit cloudformation parameters.json file
@@ -17,7 +17,7 @@ Builds out a nubis jumphost and associates an elastic IP for the ec2 instance
 
 3. Build cloudformation stack
     ```bash
-    $ ./bin/build.sh nubis-jumphost
+    $ ./bin/create.sh nubis-jumphost
     ```
 
 4. Update Consul
