@@ -223,7 +223,7 @@
                 "Ref": "AWS::StackName"
               },
               {
-                "Ref": "Environment"
+                "Ref": "AWS::Region"
               },
               {
                 "Ref": "BaseZone"
@@ -235,19 +235,22 @@
     },
     "JumphostARecord": {
       "Type": "AWS::Route53::RecordSet",
-      "DependsOn": [ "JumphostHostedZone", "EIP", "EC2Stack" ],
+      "DependsOn": [
+        "JumphostHostedZone",
+        "EIP",
+        "EC2Stack"
+      ],
       "Properties": {
         "Type": "A",
         "Comment": "A record jumphost that points to EIP",
         "TTL": "900",
-        "HostedZoneName": {
+        "HostedZoneId": {
           "Fn::Join": [
-            "",
+            ".",
             [
               {
                 "Ref": "JumphostHostedZone"
-              },
-              "."
+              }
             ]
           ]
         },
@@ -269,7 +272,11 @@
             ]
           ]
         },
-        "ResourceRecords": { "Ref": "EIP" }
+        "ResourceRecords": [
+          {
+            "Ref": "EIP"
+          }
+        ]
       }
     }
   },
