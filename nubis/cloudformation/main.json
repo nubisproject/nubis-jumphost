@@ -38,6 +38,11 @@
       "Description": "Version of the Nubis Stacks",
       "Type": "String",
       "Default": "master"
+    },
+    "SubnetLocation": {
+      "Description": "Location of VPC Subnet",
+      "Type": "String",
+      "Default": "private"
     }
   },
   "Mappings": {
@@ -100,6 +105,9 @@
               },
               "InstanceType"
             ]
+          },
+          "SubnetLocation": {
+            "Ref": "SubnetLocation"
           },
           "ELB": {
             "Fn::GetAtt": [

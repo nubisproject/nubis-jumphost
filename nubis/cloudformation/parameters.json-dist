@@ -18,5 +18,13 @@
   {
     "ParameterKey": "AmiId",
     "ParameterValue": "ami-abcdef123"
+  },
+  {
+    "ParameterKey": "StacksVersion",
+    "ParameterValue": "master"
+  },
+  {
+    "ParameterKey": "SubnetLocation",
+    "ParameterValue": "private"
   }
 ]
