@@ -14,6 +14,28 @@
         "sudo chmod 755 /etc/nubis.d/migrate"
       ],
       "order": "12"
+    },
+    {
+      "type": "file",
+      "source": "nubis/bin/vimrc",
+      "destination": "/tmp/vimrc",
+      "order": "13"
+    },
+    {
+      "type": "shell",
+      "inline": [
+        "sudo cp /tmp/vimrc /root/.vimrc",
+        "sudo chown root:root /root/.vimrc",
+        "sudo chmod 644 /root/.vimrc",
+        "sudo cp /tmp/vimrc /home/ec2-user/.vimrc",
+        "sudo chown ec2-user:ec2-user /home/ec2-user/.vimrc",
+        "sudo chmod 644 /home/ec2-user/.vimrc"
+      ],
+      "order": "14"
+    },
+    {
+      "type": "shell",
+      "script": "bin/cloud-init.sh"
     }
   ]
 }
