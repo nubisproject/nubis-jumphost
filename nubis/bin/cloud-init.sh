@@ -1,6 +1,8 @@
 #!/bin/bash
+# A way to get cloud init into our instance without having to muck
+# too much with cloudformations cloud-init resource
 
-cat > /tmp/99-nubis-cloud-init.cfg << EOF
+cat << EOF | sudo tee /etc/cloud/cloud.cfg.d/99-nubis-cloud-init.cfg
 #cloud-config
 packages:
     - htop
@@ -8,4 +10,3 @@ packages:
 #vim:syntax=yaml
 EOF
 
-sudo mv /tmp/99-nubis-cloud-init.cfg /etc/cloud/cloud.cfg.d/99-nubis-cloud-init.cfg
