@@ -228,10 +228,13 @@
             ".",
             [
               {
+                "Ref": "AWS::Region"
+              },
+              {
                 "Ref": "AWS::StackName"
               },
               {
-                "Ref": "AWS::Region"
+                "Ref": "Environment"
               },
               {
                 "Ref": "BaseZone"
@@ -267,11 +270,15 @@
             "",
             [
               {
+                "Ref": "AWS::Region"
+              },
+              ".",
+              {
                 "Ref": "AWS::StackName"
               },
               ".",
               {
-                "Ref": "AWS::Region"
+                "Ref": "Environment"
               },
               ".",
               {
