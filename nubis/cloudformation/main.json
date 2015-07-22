@@ -42,7 +42,7 @@
     "SubnetLocation": {
       "Description": "Location of VPC Subnet",
       "Type": "String",
-      "Default": "private"
+      "Default": "public"
     }
   },
   "Mappings": {
