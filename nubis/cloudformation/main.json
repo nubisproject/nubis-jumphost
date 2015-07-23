@@ -37,7 +37,7 @@
     "StacksVersion": {
       "Description": "Version of the Nubis Stacks",
       "Type": "String",
-      "Default": "master"
+      "Default": "v0.9.0"
     },
     "SubnetLocation": {
       "Description": "Location of VPC Subnet",
