@@ -32,10 +32,6 @@
         "sudo chmod 644 /home/ec2-user/.vimrc"
       ],
       "order": "14"
-    },
-    {
-      "type": "shell",
-      "script": "nubis/bin/cloud-init.sh"
     }
   ]
 }
