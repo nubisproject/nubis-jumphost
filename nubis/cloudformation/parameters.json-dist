@@ -25,6 +25,6 @@
   },
   {
     "ParameterKey": "SubnetLocation",
-    "ParameterValue": "private"
+    "ParameterValue": "public"
   }
 ]
