@@ -22,9 +22,5 @@
   {
     "ParameterKey": "StacksVersion",
     "ParameterValue": "v0.9.0"
-  },
-  {
-    "ParameterKey": "SubnetLocation",
-    "ParameterValue": "public"
   }
 ]
