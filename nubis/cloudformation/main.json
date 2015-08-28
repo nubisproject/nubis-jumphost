@@ -134,7 +134,7 @@
               "InstanceType"
             ]
           },
-          "SubnetLocation": "Public"
+          "SubnetLocation": "public"
         }
       }
     },
