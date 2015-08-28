@@ -122,8 +122,8 @@
           "SSHKeyName": {
             "Ref": "SSHKeyName"
           },
-          "IamInstanceProfile": {
-            "Ref": "EIPInstanceProfile"
+          "IamRole": {
+            "Ref": "EIPRole"
           },
           "InstanceType": {
             "Fn::FindInMap": [
@@ -192,17 +192,6 @@
             }
           ]
         },
-        "Roles": [
-          {
-            "Ref": "EIPRole"
-          }
-        ]
-      }
-    },
-    "EIPInstanceProfile": {
-      "Type": "AWS::IAM::InstanceProfile",
-      "Properties": {
-        "Path": "/",
         "Roles": [
           {
             "Ref": "EIPRole"
