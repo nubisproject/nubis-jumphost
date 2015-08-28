@@ -59,6 +59,39 @@
     }
   },
   "Resources": {
+    "ProjectInfo": {
+      "Type": "Custom::ProjectInfo",
+      "Properties": {
+        "ServiceToken": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:aws:lambda:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":function:",
+              "LookupStackOutputs"
+            ]
+          ]
+        },
+        "StackName": {
+          "Fn::Join": [
+            "-",
+            [
+              {
+                "Ref": "AWS::Region"
+              },
+              "vpc"
+            ]
+          ]
+        }
+      }
+    },
     "EC2Stack": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
@@ -220,34 +253,9 @@
         ]
       }
     },
-    "JumphostHostedZone": {
-      "Type": "AWS::Route53::HostedZone",
-      "Properties": {
-        "Name": {
-          "Fn::Join": [
-            ".",
-            [
-              {
-                "Ref": "AWS::Region"
-              },
-              {
-                "Ref": "AWS::StackName"
-              },
-              {
-                "Ref": "Environment"
-              },
-              {
-                "Ref": "BaseZone"
-              }
-            ]
-          ]
-        }
-      }
-    },
     "JumphostARecord": {
       "Type": "AWS::Route53::RecordSet",
       "DependsOn": [
-        "JumphostHostedZone",
         "EIP",
         "EC2Stack"
       ],
@@ -260,29 +268,27 @@
             ".",
             [
               {
-                "Ref": "JumphostHostedZone"
+                "Fn::GetAtt": [
+                  "ProjectInfo",
+                  "HostedZoneId"
+                ]
               }
             ]
           ]
         },
         "Name": {
           "Fn::Join": [
-            "",
+            ".",
             [
-              {
-                "Ref": "AWS::Region"
-              },
-              ".",
-              {
-                "Ref": "AWS::StackName"
-              },
-              ".",
+              "jumphost",
               {
                 "Ref": "Environment"
               },
-              ".",
               {
-                "Ref": "BaseZone"
+                "Fn::GetAtt": [
+                  "ProjectInfo",
+                  "HostedZoneName"
+                ]
               }
             ]
           ]
