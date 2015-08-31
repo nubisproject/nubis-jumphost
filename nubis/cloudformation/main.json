@@ -37,7 +37,7 @@
     "StacksVersion": {
       "Description": "Version of the Nubis Stacks",
       "Type": "String",
-      "Default": "v0.9.0"
+      "Default": "v1.0.0"
     }
   },
   "Mappings": {

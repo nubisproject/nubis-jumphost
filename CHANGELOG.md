@@ -1,6 +1,46 @@
 # Change Log
 
-## [v0.9.0](https://github.com/nubisproject/nubis-jumphost/tree/v0.9.0) (2015-07-22)
+## [v1.0.0](https://github.com/nubisproject/nubis-jumphost/tree/v1.0.0) (2015-08-30)
+
+[Full Changelog](https://github.com/nubisproject/nubis-jumphost/compare/v0.9.0...v1.0.0)
+
+**Implemented enhancements:**
+
+- Discover our EIP via CF DescribeStacks instead of Consul, so we can deploy jumphosts [\#27](https://github.com/Nubisproject/nubis-jumphost/issues/27)
+
+- Remove elb from nubis-jumphost [\#15](https://github.com/Nubisproject/nubis-jumphost/issues/15)
+
+- Should pin StackVersion to a known version \(v0.9.0\) as master is unstable [\#7](https://github.com/Nubisproject/nubis-jumphost/issues/7)
+
+**Fixed bugs:**
+
+- Add an MPL LICENSE file [\#10](https://github.com/Nubisproject/nubis-jumphost/issues/10)
+
+**Closed issues:**
+
+- use the new EC2 Role argument instead of IAMInstanceProfile [\#23](https://github.com/Nubisproject/nubis-jumphost/issues/23)
+
+- Install packages a build time not boot time [\#17](https://github.com/Nubisproject/nubis-jumphost/issues/17)
+
+**Merged pull requests:**
+
+- Add the ability to describe CloudFormation stacks. [\#28](https://github.com/Nubisproject/nubis-jumphost/pull/28) ([gozer](https://github.com/gozer))
+
+- Remove Subnetlocation [\#26](https://github.com/Nubisproject/nubis-jumphost/pull/26) ([limed](https://github.com/limed))
+
+- Let EC2 create our IAM Profile [\#24](https://github.com/Nubisproject/nubis-jumphost/pull/24) ([gozer](https://github.com/gozer))
+
+- ELBs can be omitted now. [\#21](https://github.com/Nubisproject/nubis-jumphost/pull/21) ([gozer](https://github.com/gozer))
+
+- Use project hosted zone [\#20](https://github.com/Nubisproject/nubis-jumphost/pull/20) ([tinnightcap](https://github.com/tinnightcap))
+
+- Remove cloud init [\#19](https://github.com/Nubisproject/nubis-jumphost/pull/19) ([limed](https://github.com/limed))
+
+- Submodule bump [\#18](https://github.com/Nubisproject/nubis-jumphost/pull/18) ([limed](https://github.com/limed))
+
+- Add license file, fixes issue \#10 [\#11](https://github.com/Nubisproject/nubis-jumphost/pull/11) ([limed](https://github.com/limed))
+
+## [v0.9.0](https://github.com/nubisproject/nubis-jumphost/tree/v0.9.0) (2015-07-23)
 
 **Closed issues:**
 
@@ -9,6 +49,8 @@
 - Default subnet location should be public [\#5](https://github.com/Nubisproject/nubis-jumphost/issues/5)
 
 **Merged pull requests:**
+
+- Updating changelog for v0.9.0 release [\#9](https://github.com/Nubisproject/nubis-jumphost/pull/9) ([gozer](https://github.com/gozer))
 
 - Pin stack version [\#8](https://github.com/Nubisproject/nubis-jumphost/pull/8) ([limed](https://github.com/limed))
 
