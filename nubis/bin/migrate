@@ -81,7 +81,7 @@ EC2_REGION="`echo \"$EC2_AVAIL_ZONE\" | sed -e 's:\([0-9][0-9]*\)[a-z]*\$:\\1:'`
 
 # If we didn't find our elasticip in Consul, look for it in our CloudFormation stack outputs
 if [ -z "${elasticip_id}" ]; then
-  elasticip_id = $(aws --region $EC2_REGION cloudformation describe-stacks --stack-name $STACK_NAME --query 'Stacks[].Outputs[?OutputKey == ElasticIP].OutputValue' --output text)
+  elasticip_id = $(aws --region $EC2_REGION cloudformation describe-stacks --stack-name $NUBIS_STACK --query "Stacks[].Outputs[?OutputKey=='ElasticIP'].OutputValue" --output text)
 fi
 
 if [[ -z "${instance_id}" ]]; then
