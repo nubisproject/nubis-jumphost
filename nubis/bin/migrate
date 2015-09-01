@@ -50,6 +50,26 @@ while [ "$CONSUL_UP" != "0" ]; do
     fi
 done
 
+instance_id=$(curl -s -fq http://169.254.169.254/latest/meta-data/instance-id)
+local_ip=$(curl -s -fq http://169.254.169.254/latest/meta-data/local-ipv4)
+
+EC2_AVAIL_ZONE=`curl -s http://169.254.169.254/latest/meta-data/placement/availability-zone`
+EC2_REGION="`echo \"$EC2_AVAIL_ZONE\" | sed -e 's:\([0-9][0-9]*\)[a-z]*\$:\\1:'`"
+
+# First, check with CloudFormation to see if we can find our IP
+if [ -z "${elasticip_id}" ]; then
+  elasticip_id=$(aws --region $EC2_REGION cloudformation describe-stacks --stack-name $NUBIS_STACK --query "Stacks[].Outputs[?OutputKey=='ElasticIP'].OutputValue" --output text)
+
+  # If we found it, store it in Consul, just to be thourough
+  if [[ ! -z "${elasticip_id}" ]]; then
+    curl -s -X PUT -d "$elasticip_id" $CONSUL/ElasticIP
+  fi
+
+fi
+
+# Second, try and find it in Consul
+if [[ -z "${instance_id}" ]]; then
+
 # Grab the variables from consul
 #+ If this is a new stack we need to wait for the values to be placed in consul
 #+ We will test the first and sleep with a timeout
@@ -73,15 +93,7 @@ while [ "$KEYS_UP" != "0" ]; do
 done
 
 elasticip_id=$(curl -s $CONSUL/ElasticIP?raw=1)
-instance_id=$(curl -s -fq http://169.254.169.254/latest/meta-data/instance-id)
-local_ip=$(curl -s -fq http://169.254.169.254/latest/meta-data/local-ipv4)
 
-EC2_AVAIL_ZONE=`curl -s http://169.254.169.254/latest/meta-data/placement/availability-zone`
-EC2_REGION="`echo \"$EC2_AVAIL_ZONE\" | sed -e 's:\([0-9][0-9]*\)[a-z]*\$:\\1:'`"
-
-# If we didn't find our elasticip in Consul, look for it in our CloudFormation stack outputs
-if [ -z "${elasticip_id}" ]; then
-  elasticip_id = $(aws --region $EC2_REGION cloudformation describe-stacks --stack-name $NUBIS_STACK --query "Stacks[].Outputs[?OutputKey=='ElasticIP'].OutputValue" --output text)
 fi
 
 if [[ -z "${instance_id}" ]]; then
