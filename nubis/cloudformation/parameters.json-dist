@@ -8,7 +8,7 @@
     "ParameterValue": "sandbox"
   },
   {
-    "ParameterKey": "KeyName",
+    "ParameterKey": "SSHKeyName",
     "ParameterValue": "key"
   },
   {

@@ -1,2 +1,3 @@
 # Do not track secrets
-nubis/cloudformation/parameters.json
+nubis/cloudformation/parameters*
+!nubis/cloudformation/parameters.json-dist
