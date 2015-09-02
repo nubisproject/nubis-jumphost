@@ -43,14 +43,17 @@
   },
   "Mappings": {
     "InstanceTypeMap": {
+      "admin": {
+        "InstanceType": "t2.micro"
+      },
       "prod": {
-        "InstanceType": "m3.large"
+        "InstanceType": "t2.micro"
       },
       "stage": {
-        "InstanceType": "m3.medium"
+        "InstanceType": "t2.micro"
       },
       "sandbox": {
-        "InstanceType": "m3.medium"
+        "InstanceType": "t2.micro"
       }
     }
   },
