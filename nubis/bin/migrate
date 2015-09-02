@@ -35,7 +35,13 @@ EC2_REGION="`echo \"$EC2_AVAIL_ZONE\" | sed -e 's:\([0-9][0-9]*\)[a-z]*\$:\\1:'`
 
 # First, check with CloudFormation to see if we can find our IP
 if [ -z "${elasticip_id}" ]; then
-  elasticip_id=$(aws --region $EC2_REGION cloudformation describe-stacks --stack-name $NUBIS_STACK --query "Stacks[].Outputs[?OutputKey=='ElasticIP'].OutputValue" --output text)
+
+  # is it up yet? Otherwise we need to wait for the stack to finish
+  until [ ! -z "${elasticip_id}" ]; do
+    $LOGGER "Waiting on Elastic IP to be ready"
+    elasticip_id=$(aws --region $EC2_REGION cloudformation describe-stacks --stack-name $NUBIS_STACK --query "Stacks[].Outputs[?OutputKey=='ElasticIP'].OutputValue" --output text)
+    sleep 10
+  done
 
   # If we found it, store it in Consul, just to be thourough
   if [[ ! -z "${elasticip_id}" ]]; then

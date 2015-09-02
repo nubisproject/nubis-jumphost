@@ -94,6 +94,7 @@
     },
     "EC2Stack": {
       "Type": "AWS::CloudFormation::Stack",
+      "DependsOn": [ "EIP" ],
       "Properties": {
         "TemplateURL": {
           "Fn::Join": [
@@ -269,6 +270,12 @@
           "EIP",
           "AllocationId"
         ]
+      }
+    },
+    "EIP": {
+      "Description": "Elastic IP",
+      "Value": {
+        "Ref": "EIP"
       }
     }
   }
