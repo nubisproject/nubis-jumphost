@@ -27,29 +27,6 @@ fi
 # Set up the consul url
 CONSUL="http://localhost:8500/v1/kv/$NUBIS_STACK/$NUBIS_ENVIRONMENT/config"
 
-# We run early, so we need to account for Consul's startup time, unfortunately, magic isn't
-# always free
-CONSUL_UP=-1
-COUNT=0
-while [ "$CONSUL_UP" != "0" ]; do
-    if [ ${COUNT} == "6" ]; then
-        $LOGGER "ERROR: Timeout while attempting to connect to consul."
-        exit 1
-    fi
-    QUERY=`curl -s ${CONSUL}?raw=1`
-    CONSUL_UP=$?
-
-    if [ "$QUERY" != "" ]; then
-        CONSUL_UP=-2
-    fi
-
-    if [ "$CONSUL_UP" != "0" ]; then
-        $LOGGER "Consul not ready yet ($CONSUL_UP). Sleeping 10 seconds before retrying..."
-        sleep 10
-        COUNT=${COUNT}+1
-    fi
-done
-
 instance_id=$(curl -s -fq http://169.254.169.254/latest/meta-data/instance-id)
 local_ip=$(curl -s -fq http://169.254.169.254/latest/meta-data/local-ipv4)
 
