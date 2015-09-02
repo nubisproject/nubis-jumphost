@@ -238,7 +238,9 @@
           "Fn::Join": [
             ".",
             [
-              "jumphost",
+              {
+                "Ref": "ServiceName"
+              },
               {
                 "Ref": "Environment"
               },
