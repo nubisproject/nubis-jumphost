@@ -71,7 +71,7 @@
                 "Ref": "AWS::AccountId"
               },
               ":function:",
-              "LookupStackOutputs"
+              "LookupNestedStackOutputs"
             ]
           ]
         },
@@ -85,7 +85,8 @@
               "vpc"
             ]
           ]
-        }
+        },
+        "SearchString": "Meta"
       }
     },
     "EC2Stack": {
