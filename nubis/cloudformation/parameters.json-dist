@@ -21,6 +21,6 @@
   },
   {
     "ParameterKey": "StacksVersion",
-    "ParameterValue": "v0.9.0"
+    "ParameterValue": "v1.0.0"
   }
 ]
