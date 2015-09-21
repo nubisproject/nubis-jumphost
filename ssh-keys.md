@@ -21,6 +21,9 @@ cat keys.pub | ssh ec2-user@jumphost.stage.us-east-1.plan-b-<project-name>.nubis
 
 For now we are only doing this for admins if there is a need for additional people we will actually create an account for them without sudo access so that they can have access to their instance
 
+
+#### Adding users on jumphost
+
 For ubuntu (Assuming you are ssh'ed into the jumphost):
 
 ```bash
