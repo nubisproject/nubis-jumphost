@@ -3,6 +3,7 @@ For now we have been deploying SSH keys manually to all our jumphost instances.
 
 In order to get all the SSH keys we need into our jumphost we use a helper [script](https://github.com/Nubisproject/nubis-junkheap/blob/master/keys.sh) to dump out our SSH keys from LDAP
 
+NOTE: You will need to have VPN enabled to be able to connect to LDAP
 
 Example usage:
 ```bash
