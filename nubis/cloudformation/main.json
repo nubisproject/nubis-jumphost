@@ -58,8 +58,44 @@
     }
   },
   "Resources": {
-    "ProjectInfo": {
-      "Type": "Custom::ProjectInfo",
+    "VpcInfo": {
+      "Type": "Custom::VpcInfo",
+      "Properties": {
+        "ServiceToken": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:aws:lambda:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":function:",
+              "LookupNestedStackOutputs"
+            ]
+          ]
+        },
+        "StackName": {
+          "Fn::Join": [
+            "-",
+            [
+              {
+                "Ref": "AWS::Region"
+              },
+              "vpc"
+            ]
+          ]
+        },
+        "SearchString": {
+          "Ref": "Environment"
+        }
+      }
+    },
+    "MetaInfo": {
+      "Type": "Custom::MetaInfo",
       "Properties": {
         "ServiceToken": {
           "Fn::Join": [
@@ -90,6 +126,50 @@
           ]
         },
         "SearchString": "Meta"
+      }
+    },
+    "EC2SecurityGroup": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "SSH traffic rules",
+        "VpcId": {
+          "Fn::GetAtt": [
+            "VpcInfo",
+            "VpcId"
+          ]
+        },
+        "SecurityGroupIngress": [
+          {
+            "IpProtocol": "tcp",
+            "FromPort": "22",
+            "ToPort": "22",
+            "CidrIp": "0.0.0.0/0"
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "ServiceName",
+            "Value": {
+              "Ref": "ServiceName"
+            }
+          },
+          {
+            "Key": "TechnicalOwner",
+            "Value": {
+              "Ref": "TechnicalOwner"
+            }
+          },
+          {
+            "Key": "Environment",
+            "Value": {
+              "Ref": "Environment"
+            }
+          },
+          {
+            "Key": "Purpose",
+            "Value": "SSH Security Group"
+          }
+        ]
       }
     },
     "EC2Stack": {
@@ -127,6 +207,9 @@
           },
           "SSHKeyName": {
             "Ref": "SSHKeyName"
+          },
+          "SecurityGroup": {
+            "Ref": "EC2SecurityGroup"
           },
           "IamRole": {
             "Ref": "EIPRole"
@@ -228,7 +311,7 @@
             [
               {
                 "Fn::GetAtt": [
-                  "ProjectInfo",
+                  "MetaInfo",
                   "HostedZoneId"
                 ]
               }
@@ -247,7 +330,7 @@
               },
               {
                 "Fn::GetAtt": [
-                  "ProjectInfo",
+                  "MetaInfo",
                   "HostedZoneName"
                 ]
               }
