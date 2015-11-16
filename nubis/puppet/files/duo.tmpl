@@ -1,0 +1,18 @@
+[duo]
+ikey = {{ if exists "/ikey" }}{{ getv "/ikey" }}{{ end }}"
+skey = {{ if exists "/skey" }}{{ getv "/skey" }}{{ end }}"
+host = {{ if exists "/host" }}{{ getv "/host" }}{{ end }}"
+
+; Send command for Duo Push authentication
+pushinfo = yes
+
+; Hack to enable LDAP translation from uid -> mail attribute in ldap
+; since our mail and uid attributes aren't necessarily the same :( :( :(
+ldap_server = {{ if exists "/ldap-server" }}{{ getv "/ldap-server" }}{{ end }}
+ldap_binddn = {{ if exists "/ldap-binddn"}}{{ getv "/ldap-binddn" }}{{ end }}
+ldap_password = {{ if exists "/ldap-bindpassword" }}{{ getv "/ldap-bindpassword" }}{{ end }}
+ldap_basedn = {{ if exists "/ldap-basedn" }}{{ getv "/ldap-basedn" }}{{ end }}
+ldap_resolve_hack = 1
+ldap_smartfail_domain = mozilla.com
+ldap_to_attribute = mail
+ldap_from_attribute = uid

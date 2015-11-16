@@ -1,0 +1,13 @@
+[template]
+src = "duo.tmpl"
+dest = "/etc/duo/pam_duo.conf"
+prefix = "/%%STACK%%/%%ENVIRONMENT%%/config"
+keys = [
+    "/ikey",
+    "/skey",
+    "/host",
+    "/ldap-server",
+    "/ldap-binddn",
+    "/ldap-bindpassword",
+    "/ldap-basedn"
+]
