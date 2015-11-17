@@ -1,7 +1,7 @@
 [duo]
-ikey = {{ if exists "/ikey" }}{{ getv "/ikey" }}{{ end }}"
-skey = {{ if exists "/skey" }}{{ getv "/skey" }}{{ end }}"
-host = {{ if exists "/host" }}{{ getv "/host" }}{{ end }}"
+ikey = {{ if exists "/ikey" }}{{ getv "/ikey" }}{{ end }}
+skey = {{ if exists "/skey" }}{{ getv "/skey" }}{{ end }}
+host = {{ if exists "/host" }}{{ getv "/host" }}{{ end }}
 
 ; Send command for Duo Push authentication
 pushinfo = yes
