@@ -9,5 +9,6 @@ keys = [
     "/ldap-server",
     "/ldap-binddn",
     "/ldap-bindpassword",
-    "/ldap-basedn"
+    "/ldap-basedn",
+    "/ldap-smartfail-domain"
 ]

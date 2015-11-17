@@ -13,6 +13,6 @@ ldap_binddn = {{ if exists "/ldap-binddn"}}{{ getv "/ldap-binddn" }}{{ end }}
 ldap_password = {{ if exists "/ldap-bindpassword" }}{{ getv "/ldap-bindpassword" }}{{ end }}
 ldap_basedn = {{ if exists "/ldap-basedn" }}{{ getv "/ldap-basedn" }}{{ end }}
 ldap_resolve_hack = 1
-ldap_smartfail_domain = mozilla.com
+ldap_smartfail_domain = {{ if exists "/ldap-smartfail-domain" }}{{ getv "/ldap-smartfail-domain" }}{{ else }}mozilla.com{{ end }}
 ldap_to_attribute = mail
 ldap_from_attribute = uid

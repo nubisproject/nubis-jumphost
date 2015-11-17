@@ -1,0 +1,17 @@
+#!/bin/bash
+# Gotta do this because the values are not known during AMI creation time
+# However they are known during bootup
+
+eval $(curl -s -fq http://169.254.169.254/latest/user-data)
+
+# YUCK
+if [[ "$NUBIS_ENVIRONMENT" != "" ]]; then
+    sed -i -e "s/%%ENVIRONMENT%%/$NUBIS_ENVIRONMENT/g" /etc/conf/conf.d/okta.toml
+fi
+
+if [[ "$NUBIS_STACK" != "" ]]; then
+    sed -i -e "s/%%STACK%%/$NUBIS_STACK/g" /etc/conf/conf.d/okta.toml
+fi
+
+# Restart confd
+service confd restart

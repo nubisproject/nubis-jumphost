@@ -26,7 +26,7 @@ file { '/etc/confd/conf.d/duo.toml':
     require => Package['duo_unix'],
 }
 
-file { '/etc/confd/templates':
+file { '/etc/confd/templates/duo.tmpl':
     ensure  => 'file',
     owner   => root,
     group   => root,
@@ -35,3 +35,11 @@ file { '/etc/confd/templates':
     require => [ Package['duo_unix'], File['/etc/confd/conf.d/duo.toml'] ],
 }
 
+file { '/etc/nubis.d/confd-fixup':
+    ensure  => file,
+    owner   => root,
+    group   => root,
+    mode    => '0755',
+    source  => 'puppet:///nubis/files/confd-fixup',
+    require => [ File['/etc/confd/conf.d/duo.toml'], File['/etc/confd/templates/duo.tmpl'] ],
+}
