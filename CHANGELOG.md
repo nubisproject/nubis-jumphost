@@ -1,66 +1,87 @@
 # Change Log
 
-## [v1.0.0](https://github.com/nubisproject/nubis-jumphost/tree/v1.0.0) (2015-08-30)
+## [v1.0.1](https://github.com/nubisproject/nubis-jumphost/tree/v1.0.1) (2015-11-20)
+[Full Changelog](https://github.com/nubisproject/nubis-jumphost/compare/v1.0.0...v1.0.1)
 
+**Implemented enhancements:**
+
+- Add security group for ssh [\#51](https://github.com/nubisproject/nubis-jumphost/issues/51)
+- Bump StacksVersion in parameters.json-dist [\#42](https://github.com/nubisproject/nubis-jumphost/issues/42)
+- Hardcoded A record [\#38](https://github.com/nubisproject/nubis-jumphost/issues/38)
+- Update parameters.json-dist [\#30](https://github.com/nubisproject/nubis-jumphost/issues/30)
+
+**Fixed bugs:**
+
+- Add security group for ssh [\#51](https://github.com/nubisproject/nubis-jumphost/issues/51)
+- Update stack url to new location [\#41](https://github.com/nubisproject/nubis-jumphost/issues/41)
+- Using wrong lambda function [\#32](https://github.com/nubisproject/nubis-jumphost/issues/32)
+- Update parameters.json-dist [\#30](https://github.com/nubisproject/nubis-jumphost/issues/30)
+
+**Closed issues:**
+
+- Tag  release [\#52](https://github.com/nubisproject/nubis-jumphost/issues/52)
+- Add StacksVersion to lambda calls, to allow for graceful forward upgrades [\#48](https://github.com/nubisproject/nubis-jumphost/issues/48)
+- Before we peek at the CF Outputs, we need to make sure the stack is done [\#36](https://github.com/nubisproject/nubis-jumphost/issues/36)
+- SubnetLocation should probably default to public or be removed entirely [\#22](https://github.com/nubisproject/nubis-jumphost/issues/22)
+
+**Merged pull requests:**
+
+- Update AMI IDs file for v1.0.1 release [\#57](https://github.com/nubisproject/nubis-jumphost/pull/57) ([tinnightcap](https://github.com/tinnightcap))
+- Update StacksVersion for v1.0.1 release [\#56](https://github.com/nubisproject/nubis-jumphost/pull/56) ([tinnightcap](https://github.com/tinnightcap))
+- Add StacksVersion to VPCinfo and MetaInfo [\#49](https://github.com/nubisproject/nubis-jumphost/pull/49) ([gozer](https://github.com/gozer))
+- Add custom security group [\#47](https://github.com/nubisproject/nubis-jumphost/pull/47) ([tinnightcap](https://github.com/tinnightcap))
+- Docs update [\#45](https://github.com/nubisproject/nubis-jumphost/pull/45) ([limed](https://github.com/limed))
+- Fixed url for ec2 stack [\#44](https://github.com/nubisproject/nubis-jumphost/pull/44) ([limed](https://github.com/limed))
+- Version bump for parameters file [\#43](https://github.com/nubisproject/nubis-jumphost/pull/43) ([limed](https://github.com/limed))
+- Fixed migrate script to wait for cloudformation output [\#40](https://github.com/nubisproject/nubis-jumphost/pull/40) ([limed](https://github.com/limed))
+- No more hardcoded value [\#39](https://github.com/nubisproject/nubis-jumphost/pull/39) ([limed](https://github.com/limed))
+- If Consul doesn't have an EIP for us, peek at our CF Stack looking for an ElasticIP output [\#35](https://github.com/nubisproject/nubis-jumphost/pull/35) ([gozer](https://github.com/gozer))
+- Update .gitignore for multiple parameters files [\#34](https://github.com/nubisproject/nubis-jumphost/pull/34) ([tinnightcap](https://github.com/tinnightcap))
+- Use the proper lambda function [\#33](https://github.com/nubisproject/nubis-jumphost/pull/33) ([limed](https://github.com/limed))
+- Rename KeyName to SSHKeyName [\#31](https://github.com/nubisproject/nubis-jumphost/pull/31) ([limed](https://github.com/limed))
+
+## [v1.0.0](https://github.com/nubisproject/nubis-jumphost/tree/v1.0.0) (2015-08-31)
 [Full Changelog](https://github.com/nubisproject/nubis-jumphost/compare/v0.9.0...v1.0.0)
 
 **Implemented enhancements:**
 
-- Discover our EIP via CF DescribeStacks instead of Consul, so we can deploy jumphosts [\#27](https://github.com/Nubisproject/nubis-jumphost/issues/27)
-
-- Remove elb from nubis-jumphost [\#15](https://github.com/Nubisproject/nubis-jumphost/issues/15)
-
-- Should pin StackVersion to a known version \(v0.9.0\) as master is unstable [\#7](https://github.com/Nubisproject/nubis-jumphost/issues/7)
+- Remove elb from nubis-jumphost [\#15](https://github.com/nubisproject/nubis-jumphost/issues/15)
+- Discover our EIP via CF DescribeStacks instead of Consul, so we can deploy jumphosts [\#27](https://github.com/nubisproject/nubis-jumphost/issues/27)
+- Should pin StackVersion to a known version \(v0.9.0\) as master is unstable [\#7](https://github.com/nubisproject/nubis-jumphost/issues/7)
 
 **Fixed bugs:**
 
-- Add an MPL LICENSE file [\#10](https://github.com/Nubisproject/nubis-jumphost/issues/10)
+- Add an MPL LICENSE file [\#10](https://github.com/nubisproject/nubis-jumphost/issues/10)
 
 **Closed issues:**
 
-- use the new EC2 Role argument instead of IAMInstanceProfile [\#23](https://github.com/Nubisproject/nubis-jumphost/issues/23)
-
-- Install packages a build time not boot time [\#17](https://github.com/Nubisproject/nubis-jumphost/issues/17)
+- use the new EC2 Role argument instead of IAMInstanceProfile [\#23](https://github.com/nubisproject/nubis-jumphost/issues/23)
+- Install packages a build time not boot time [\#17](https://github.com/nubisproject/nubis-jumphost/issues/17)
+- Tag v1.0.0 release [\#13](https://github.com/nubisproject/nubis-jumphost/issues/13)
 
 **Merged pull requests:**
 
-- Add the ability to describe CloudFormation stacks. [\#28](https://github.com/Nubisproject/nubis-jumphost/pull/28) ([gozer](https://github.com/gozer))
-
-- Remove Subnetlocation [\#26](https://github.com/Nubisproject/nubis-jumphost/pull/26) ([limed](https://github.com/limed))
-
-- Let EC2 create our IAM Profile [\#24](https://github.com/Nubisproject/nubis-jumphost/pull/24) ([gozer](https://github.com/gozer))
-
-- ELBs can be omitted now. [\#21](https://github.com/Nubisproject/nubis-jumphost/pull/21) ([gozer](https://github.com/gozer))
-
-- Use project hosted zone [\#20](https://github.com/Nubisproject/nubis-jumphost/pull/20) ([tinnightcap](https://github.com/tinnightcap))
-
-- Remove cloud init [\#19](https://github.com/Nubisproject/nubis-jumphost/pull/19) ([limed](https://github.com/limed))
-
-- Submodule bump [\#18](https://github.com/Nubisproject/nubis-jumphost/pull/18) ([limed](https://github.com/limed))
-
-- Add license file, fixes issue \#10 [\#11](https://github.com/Nubisproject/nubis-jumphost/pull/11) ([limed](https://github.com/limed))
+- Add the ability to describe CloudFormation stacks. [\#28](https://github.com/nubisproject/nubis-jumphost/pull/28) ([gozer](https://github.com/gozer))
+- Remove Subnetlocation [\#26](https://github.com/nubisproject/nubis-jumphost/pull/26) ([limed](https://github.com/limed))
+- Let EC2 create our IAM Profile [\#24](https://github.com/nubisproject/nubis-jumphost/pull/24) ([gozer](https://github.com/gozer))
+- ELBs can be omitted now. [\#21](https://github.com/nubisproject/nubis-jumphost/pull/21) ([gozer](https://github.com/gozer))
+- Use project hosted zone [\#20](https://github.com/nubisproject/nubis-jumphost/pull/20) ([tinnightcap](https://github.com/tinnightcap))
+- Remove cloud init [\#19](https://github.com/nubisproject/nubis-jumphost/pull/19) ([limed](https://github.com/limed))
+- Submodule bump [\#18](https://github.com/nubisproject/nubis-jumphost/pull/18) ([limed](https://github.com/limed))
+- Add license file, fixes issue \#10 [\#11](https://github.com/nubisproject/nubis-jumphost/pull/11) ([limed](https://github.com/limed))
 
 ## [v0.9.0](https://github.com/nubisproject/nubis-jumphost/tree/v0.9.0) (2015-07-23)
-
 **Closed issues:**
 
-- Update DNS naming to match existing convention [\#6](https://github.com/Nubisproject/nubis-jumphost/issues/6)
-
-- Default subnet location should be public [\#5](https://github.com/Nubisproject/nubis-jumphost/issues/5)
+- Update DNS naming to match existing convention [\#6](https://github.com/nubisproject/nubis-jumphost/issues/6)
+- Default subnet location should be public [\#5](https://github.com/nubisproject/nubis-jumphost/issues/5)
 
 **Merged pull requests:**
 
-- Updating changelog for v0.9.0 release [\#9](https://github.com/Nubisproject/nubis-jumphost/pull/9) ([gozer](https://github.com/gozer))
-
-- Pin stack version [\#8](https://github.com/Nubisproject/nubis-jumphost/pull/8) ([limed](https://github.com/limed))
-
-- Route 53 dns rename [\#4](https://github.com/Nubisproject/nubis-jumphost/pull/4) ([limed](https://github.com/limed))
-
-- Default VPC subnetlocation to public [\#3](https://github.com/Nubisproject/nubis-jumphost/pull/3) ([limed](https://github.com/limed))
-
-- Add StacksVersion argument, helps along nubisproject/nubis-stacks\#41 [\#2](https://github.com/Nubisproject/nubis-jumphost/pull/2) ([gozer](https://github.com/gozer))
-
-- Example [\#1](https://github.com/Nubisproject/nubis-jumphost/pull/1) ([gozer](https://github.com/gozer))
+- Updating changelog for v0.9.0 release [\#9](https://github.com/nubisproject/nubis-jumphost/pull/9) ([gozer](https://github.com/gozer))
+- Pin stack version [\#8](https://github.com/nubisproject/nubis-jumphost/pull/8) ([limed](https://github.com/limed))
+- Add StacksVersion argument, helps along nubisproject/nubis-stacks\#41 [\#2](https://github.com/nubisproject/nubis-jumphost/pull/2) ([gozer](https://github.com/gozer))
+- Example [\#1](https://github.com/nubisproject/nubis-jumphost/pull/1) ([gozer](https://github.com/gozer))
 
 
 
