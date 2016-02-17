@@ -204,6 +204,7 @@
           "ServiceName": {
             "Ref": "ServiceName"
           },
+          "Purpose": "Jumphost",
           "TechnicalOwner": {
             "Ref": "TechnicalOwner"
           },
