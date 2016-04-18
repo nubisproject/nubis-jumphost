@@ -5,8 +5,8 @@
     ],
     "project_description": "nubis jumphost install",
     "project_name": "nubis-jumphost",
-    "project_version": "v1.0.2-dev",
+    "project_version": "v1.1.0",
     "source_ami_project_name": "nubis-base",
-    "source_ami_project_version": "v1.0.2-dev"
+    "source_ami_project_version": "v1.1.0"
   }
 }
