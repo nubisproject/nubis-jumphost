@@ -1,5 +1,34 @@
 # Change Log
 
+## [v1.1.0](https://github.com/nubisproject/nubis-jumphost/tree/v1.1.0) (2016-04-18)
+[Full Changelog](https://github.com/nubisproject/nubis-jumphost/compare/v1.0.1...v1.1.0)
+
+**Implemented enhancements:**
+
+- Update purpose [\#63](https://github.com/nubisproject/nubis-jumphost/issues/63)
+- Install duo and configure via confd [\#54](https://github.com/nubisproject/nubis-jumphost/issues/54)
+
+**Closed issues:**
+
+- Create a terraform module [\#71](https://github.com/nubisproject/nubis-jumphost/issues/71)
+- Cleanup cruft [\#68](https://github.com/nubisproject/nubis-jumphost/issues/68)
+- Look at user-data for our EIP as well [\#67](https://github.com/nubisproject/nubis-jumphost/issues/67)
+- Start the v1.0.2-dev train [\#65](https://github.com/nubisproject/nubis-jumphost/issues/65)
+- Use the Credstash Policy to be able to discover the Platform Consul ACL token [\#61](https://github.com/nubisproject/nubis-jumphost/issues/61)
+- Tag v1.1.0 release [\#12](https://github.com/nubisproject/nubis-jumphost/issues/12)
+
+**Merged pull requests:**
+
+- Update versions for  release [\#73](https://github.com/nubisproject/nubis-jumphost/pull/73) ([tinnightcap](https://github.com/tinnightcap))
+- Create initial TF module for account creation [\#72](https://github.com/nubisproject/nubis-jumphost/pull/72) ([gozer](https://github.com/gozer))
+- Remove some leftover cruft [\#70](https://github.com/nubisproject/nubis-jumphost/pull/70) ([gozer](https://github.com/gozer))
+- Onto v1.0.2-dev we go [\#69](https://github.com/nubisproject/nubis-jumphost/pull/69) ([gozer](https://github.com/gozer))
+- Onto v1.0.2-dev we go [\#66](https://github.com/nubisproject/nubis-jumphost/pull/66) ([gozer](https://github.com/gozer))
+- Set Purpose=Jumphost [\#64](https://github.com/nubisproject/nubis-jumphost/pull/64) ([gozer](https://github.com/gozer))
+- Use the CredstashPolicy from the Meta stack to gain access to the platform consul ACL token [\#62](https://github.com/nubisproject/nubis-jumphost/pull/62) ([gozer](https://github.com/gozer))
+- WIP: Initial small TF deploy snippet for testing purposes [\#60](https://github.com/nubisproject/nubis-jumphost/pull/60) ([gozer](https://github.com/gozer))
+- Install and configure duo [\#55](https://github.com/nubisproject/nubis-jumphost/pull/55) ([limed](https://github.com/limed))
+
 ## [v1.0.1](https://github.com/nubisproject/nubis-jumphost/tree/v1.0.1) (2015-11-20)
 [Full Changelog](https://github.com/nubisproject/nubis-jumphost/compare/v1.0.0...v1.0.1)
 
@@ -23,9 +52,11 @@
 - Add StacksVersion to lambda calls, to allow for graceful forward upgrades [\#48](https://github.com/nubisproject/nubis-jumphost/issues/48)
 - Before we peek at the CF Outputs, we need to make sure the stack is done [\#36](https://github.com/nubisproject/nubis-jumphost/issues/36)
 - SubnetLocation should probably default to public or be removed entirely [\#22](https://github.com/nubisproject/nubis-jumphost/issues/22)
+- Tag v1.0.1 release [\#53](https://github.com/nubisproject/nubis-jumphost/issues/53)
 
 **Merged pull requests:**
 
+- Update CHANGELOG for v1.0.1 release [\#58](https://github.com/nubisproject/nubis-jumphost/pull/58) ([tinnightcap](https://github.com/tinnightcap))
 - Update AMI IDs file for v1.0.1 release [\#57](https://github.com/nubisproject/nubis-jumphost/pull/57) ([tinnightcap](https://github.com/tinnightcap))
 - Update StacksVersion for v1.0.1 release [\#56](https://github.com/nubisproject/nubis-jumphost/pull/56) ([tinnightcap](https://github.com/tinnightcap))
 - Add StacksVersion to VPCinfo and MetaInfo [\#49](https://github.com/nubisproject/nubis-jumphost/pull/49) ([gozer](https://github.com/gozer))
@@ -80,6 +111,8 @@
 
 - Updating changelog for v0.9.0 release [\#9](https://github.com/nubisproject/nubis-jumphost/pull/9) ([gozer](https://github.com/gozer))
 - Pin stack version [\#8](https://github.com/nubisproject/nubis-jumphost/pull/8) ([limed](https://github.com/limed))
+- Route 53 dns rename [\#4](https://github.com/nubisproject/nubis-jumphost/pull/4) ([limed](https://github.com/limed))
+- Default VPC subnetlocation to public [\#3](https://github.com/nubisproject/nubis-jumphost/pull/3) ([limed](https://github.com/limed))
 - Add StacksVersion argument, helps along nubisproject/nubis-stacks\#41 [\#2](https://github.com/nubisproject/nubis-jumphost/pull/2) ([gozer](https://github.com/gozer))
 - Example [\#1](https://github.com/nubisproject/nubis-jumphost/pull/1) ([gozer](https://github.com/gozer))
 
