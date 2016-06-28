@@ -27,9 +27,8 @@
         "sudo cp /tmp/vimrc /root/.vimrc",
         "sudo chown root:root /root/.vimrc",
         "sudo chmod 644 /root/.vimrc",
-        "sudo cp /tmp/vimrc /home/ec2-user/.vimrc",
-        "sudo chown ec2-user:ec2-user /home/ec2-user/.vimrc",
-        "sudo chmod 644 /home/ec2-user/.vimrc"
+        "cp /tmp/vimrc ~/.vimrc",
+        "chmod 644 ~/.vimrc"
       ],
       "order": "14"
     }

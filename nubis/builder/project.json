@@ -1,12 +1,11 @@
 {
   "variables": {
     "builders": [
-      "amazon-ebs-amazon-linux"
+      "amazon-ebs-amazon-linux",
+      "amazon-ebs-centos"
     ],
     "project_description": "nubis jumphost install",
     "project_name": "nubis-jumphost",
-    "project_version": "v1.1.0",
-    "source_ami_project_name": "nubis-base",
-    "source_ami_project_version": "v1.1.0"
+    "project_version": "v1.2.0-dev"
   }
 }
