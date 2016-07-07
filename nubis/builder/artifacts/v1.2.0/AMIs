@@ -1,0 +1,7 @@
+amazon-ebs-amazon-linux:
+us-east-1: ami-4fbb3c58
+us-west-2: ami-a335f5c3
+
+amazon-ebs-centos:
+us-east-1: ami-30bb3c27
+us-west-2: ami-c23afaa2
