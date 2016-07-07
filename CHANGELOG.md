@@ -1,5 +1,17 @@
 # Change Log
 
+## [v1.2.0](https://github.com/nubisproject/nubis-jumphost/tree/v1.2.0) (2016-07-07)
+[Full Changelog](https://github.com/nubisproject/nubis-jumphost/compare/v1.1.0...v1.2.0)
+
+**Closed issues:**
+
+- \[centos\] Support CentOS as a possible platform [\#75](https://github.com/nubisproject/nubis-jumphost/issues/75)
+
+**Merged pull requests:**
+
+- Update builder artifacts for v1.2.0 release [\#77](https://github.com/nubisproject/nubis-jumphost/pull/77) ([tinnightcap](https://github.com/tinnightcap))
+- Build for CentOS [\#76](https://github.com/nubisproject/nubis-jumphost/pull/76) ([gozer](https://github.com/gozer))
+
 ## [v1.1.0](https://github.com/nubisproject/nubis-jumphost/tree/v1.1.0) (2016-04-18)
 [Full Changelog](https://github.com/nubisproject/nubis-jumphost/compare/v1.0.1...v1.1.0)
 
@@ -16,9 +28,11 @@
 - Start the v1.0.2-dev train [\#65](https://github.com/nubisproject/nubis-jumphost/issues/65)
 - Use the Credstash Policy to be able to discover the Platform Consul ACL token [\#61](https://github.com/nubisproject/nubis-jumphost/issues/61)
 - Tag v1.1.0 release [\#12](https://github.com/nubisproject/nubis-jumphost/issues/12)
+- Tag v1.1.0 release [\#59](https://github.com/nubisproject/nubis-jumphost/issues/59)
 
 **Merged pull requests:**
 
+- Update CHANGELOG for v1.1.0 release [\#74](https://github.com/nubisproject/nubis-jumphost/pull/74) ([tinnightcap](https://github.com/tinnightcap))
 - Update versions for  release [\#73](https://github.com/nubisproject/nubis-jumphost/pull/73) ([tinnightcap](https://github.com/tinnightcap))
 - Create initial TF module for account creation [\#72](https://github.com/nubisproject/nubis-jumphost/pull/72) ([gozer](https://github.com/gozer))
 - Remove some leftover cruft [\#70](https://github.com/nubisproject/nubis-jumphost/pull/70) ([gozer](https://github.com/gozer))
