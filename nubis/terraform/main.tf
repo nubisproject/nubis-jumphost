@@ -12,7 +12,7 @@ resource "atlas_artifact" "nubis-jumphost" {
 
   metadata {
         project_version = "${var.nubis_version}"
-        platform = "amazon-linux"
+        build_name = "amazon-ebs-amazon-linux"
     }
 }
 
