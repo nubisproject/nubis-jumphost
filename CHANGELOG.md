@@ -1,14 +1,25 @@
 # Change Log
 
-## [v1.2.0](https://github.com/nubisproject/nubis-jumphost/tree/v1.2.0) (2016-07-07)
+## [v1.2.1](https://github.com/nubisproject/nubis-jumphost/tree/v1.2.1) (2016-07-30)
+[Full Changelog](https://github.com/nubisproject/nubis-jumphost/compare/v1.2.0...v1.2.1)
+
+**Merged pull requests:**
+
+- Update builder artifacts for v1.2.1 release [\#83](https://github.com/nubisproject/nubis-jumphost/pull/83) ([tinnightcap](https://github.com/tinnightcap))
+- Update builder artifacts for v1.3.0-dev release [\#81](https://github.com/nubisproject/nubis-jumphost/pull/81) ([tinnightcap](https://github.com/tinnightcap))
+
+## [v1.2.0](https://github.com/nubisproject/nubis-jumphost/tree/v1.2.0) (2016-07-08)
 [Full Changelog](https://github.com/nubisproject/nubis-jumphost/compare/v1.1.0...v1.2.0)
 
 **Closed issues:**
 
+- Tag v1.2.0 release [\#78](https://github.com/nubisproject/nubis-jumphost/issues/78)
 - \[centos\] Support CentOS as a possible platform [\#75](https://github.com/nubisproject/nubis-jumphost/issues/75)
 
 **Merged pull requests:**
 
+- search on build\_name, as plaform isnt available [\#80](https://github.com/nubisproject/nubis-jumphost/pull/80) ([gozer](https://github.com/gozer))
+- Update CHANGELOG for v1.2.0 release [\#79](https://github.com/nubisproject/nubis-jumphost/pull/79) ([tinnightcap](https://github.com/tinnightcap))
 - Update builder artifacts for v1.2.0 release [\#77](https://github.com/nubisproject/nubis-jumphost/pull/77) ([tinnightcap](https://github.com/tinnightcap))
 - Build for CentOS [\#76](https://github.com/nubisproject/nubis-jumphost/pull/76) ([gozer](https://github.com/gozer))
 
