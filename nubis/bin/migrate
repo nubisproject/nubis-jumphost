@@ -10,6 +10,7 @@ LOGGER_BIN='/usr/bin/logger'
 # Set up the logger command if the binary is installed
 if [ ! -x $LOGGER_BIN ]; then
     echo "ERROR: 'logger' binary not found - Aborting"
+    #shellcheck disable=SC2128
     echo "ERROR: '$BASH_SOURCE' Line: '$LINENO'"
 exit 2
 else
