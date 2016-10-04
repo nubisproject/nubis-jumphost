@@ -1,5 +1,9 @@
 # nubis-jumphost
 
+[![Version](https://img.shields.io/github/release/nubisproject/nubis-jumphost.svg?maxAge=2592000)](https://github.com/nubisproject/nubis-jumphost/releases)
+[![Build Status](https://img.shields.io/travis/nubisproject/nubis-jumphost/master.svg?maxAge=2592000)](https://travis-ci.org/nubisproject/nubis-jumphost)
+[![Issues](https://img.shields.io/github/issues/nubisproject/nubis-jumphost.svg?maxAge=2592000)](https://github.com/nubisproject/nubis-jumphost/issues)
+
 ### Overview
 Builds out a nubis jumphost and associates an elastic IP for the ec2 instance
 
