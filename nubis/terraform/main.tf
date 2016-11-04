@@ -17,7 +17,7 @@ resource "atlas_artifact" "nubis-jumphost" {
 }
 
 resource "aws_eip" "jumphost" {
-    lifecycle { create_before_destroy = true } 
+    lifecycle { create_before_destroy = true }
     count = "${var.enabled * length(split(",", var.environments))}"
     vpc = true
 }
@@ -46,7 +46,7 @@ resource "aws_security_group" "jumphost" {
     protocol = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
-  
+
   ingress {
     from_port = "0"
     to_port = "8"
@@ -61,7 +61,7 @@ resource "aws_security_group" "jumphost" {
       protocol = "-1"
       cidr_blocks = ["0.0.0.0/0"]
   }
-  
+
   tags = {
     Name = "${var.project}-${element(split(",",var.environments), count.index)}"
     Region = "${var.aws_region}"
@@ -145,7 +145,7 @@ resource "aws_launch_configuration" "jumphost" {
     instance_type = "t2.nano"
     key_name = "${var.key_name}"
     iam_instance_profile = "${element(aws_iam_instance_profile.jumphost.*.name, count.index)}"
-    
+
     associate_public_ip_address = true
 
     security_groups = [
@@ -202,5 +202,5 @@ resource "aws_autoscaling_group" "jumphost" {
     value = "${var.technical_contact}"
     propagate_at_launch = true
   }
- 
+
 }
