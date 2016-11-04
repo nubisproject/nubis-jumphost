@@ -162,6 +162,8 @@ NUBIS_ACCOUNT=${var.service_name}
 NUBIS_DOMAIN=${var.nubis_domain}
 NUBIS_JUMPHOST_EIP=${element(aws_eip.jumphost.*.id,count.index)}
 NUBIS_MIGRATE=1
+NUBIS_SUDO_GROUPS="${var.nubis_sudo_groups}"
+NUBIS_USER_GROUPS="${var.nubis_user_groups}"
 EOF
 }
 

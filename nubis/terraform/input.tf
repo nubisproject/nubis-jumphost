@@ -23,3 +23,10 @@ variable shared_services_security_groups {}
 variable project {
   default = "jumphost"
 }
+
+variable nubis_sudo_groups {
+  default = "nubis_global_admins"
+}
+
+variable nubis_user_groups {
+}
