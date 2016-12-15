@@ -26,15 +26,15 @@ Details for the deployment including; naming conventions, relationships, permiss
 
 |Resource Type|Resource Title|Code Location|
 |-------------|--------------|-------------|
-|atlas_artifact|nubis-jumphost|[nubis/terraform/main.tf#6](nubis/terraform/main.tf#6)|
-|aws_eip|jumphost|[nubis/terraform/main.tf#19](nubis/terraform/main.tf#19)|
-|aws_route53_record|ui|[nubis/terraform/main.tf#25](nubis/terraform/main.tf#25)|
-|aws_security_group|jumphost|[nubis/terraform/main.tf#34](nubis/terraform/main.tf#34)|
-|aws_iam_instance_profile|jumphost|[nubis/terraform/main.tf#73](nubis/terraform/main.tf#73)|
-|aws_iam_role|jumphost|[nubis/terraform/main.tf#87](nubis/terraform/main.tf#87)|
-|aws_iam_role_policy|jumphost|[nubis/terraform/main.tf#110](nubis/terraform/main.tf#110)|
-|aws_launch_configuration|jumphost|[nubis/terraform/main.tf#132](nubis/terraform/main.tf#132)|
-|aws_autoscaling_group|jumphost|[nubis/terraform/main.tf#168](nubis/terraform/main.tf#168)|
+|atlas_artifact|nubis-jumphost|[nubis/terraform/main.tf#L6](nubis/terraform/main.tf#L6)|
+|aws_eip|jumphost|[nubis/terraform/main.tf#L19](nubis/terraform/main.tf#L19)|
+|aws_route53_record|ui|[nubis/terraform/main.tf#L25](nubis/terraform/main.tf#L25)|
+|aws_security_group|jumphost|[nubis/terraform/main.tf#L34](nubis/terraform/main.tf#L34)|
+|aws_iam_instance_profile|jumphost|[nubis/terraform/main.tf#L73](nubis/terraform/main.tf#L73)|
+|aws_iam_role|jumphost|[nubis/terraform/main.tf#L87](nubis/terraform/main.tf#L87)|
+|aws_iam_role_policy|jumphost|[nubis/terraform/main.tf#L110](nubis/terraform/main.tf#L110)|
+|aws_launch_configuration|jumphost|[nubis/terraform/main.tf#L132](nubis/terraform/main.tf#L132)|
+|aws_autoscaling_group|jumphost|[nubis/terraform/main.tf#L168](nubis/terraform/main.tf#L168)|
 
 #### How to build project
 1. Build the AMI
