@@ -1,10 +1,38 @@
 # Change Log
 
-## [v1.2.2](https://github.com/nubisproject/nubis-jumphost/tree/v1.2.2) (2016-08-02)
-[Full Changelog](https://github.com/nubisproject/nubis-jumphost/compare/v1.2.1...v1.2.2)
+## [v1.3.0](https://github.com/nubisproject/nubis-jumphost/tree/v1.3.0) (2016-12-20)
+[Full Changelog](https://github.com/nubisproject/nubis-jumphost/compare/v1.2.2...v1.3.0)
+
+**Closed issues:**
+
+- Userdata input bubbling up [\#97](https://github.com/nubisproject/nubis-jumphost/issues/97)
+- Tag v1.2.3 release [\#88](https://github.com/nubisproject/nubis-jumphost/issues/88)
+- Use eip stack  [\#25](https://github.com/nubisproject/nubis-jumphost/issues/25)
 
 **Merged pull requests:**
 
+- Update builder artifacts for v1.3.0 release [\#108](https://github.com/nubisproject/nubis-jumphost/pull/108) ([tinnightcap](https://github.com/tinnightcap))
+- Fix Links & Clean up lock file [\#106](https://github.com/nubisproject/nubis-jumphost/pull/106) ([tinnightcap](https://github.com/tinnightcap))
+- update nubis-travis to v0.1.3 [\#105](https://github.com/nubisproject/nubis-jumphost/pull/105) ([gozer](https://github.com/gozer))
+- Update to nubis-travis v1.0.3 [\#104](https://github.com/nubisproject/nubis-jumphost/pull/104) ([gozer](https://github.com/gozer))
+- Add documentation diagram and updare README.md [\#103](https://github.com/nubisproject/nubis-jumphost/pull/103) ([tinnightcap](https://github.com/tinnightcap))
+- Default nubis\_user\_groups default to empty [\#100](https://github.com/nubisproject/nubis-jumphost/pull/100) ([limed](https://github.com/limed))
+- Add userdata for user management [\#99](https://github.com/nubisproject/nubis-jumphost/pull/99) ([limed](https://github.com/limed))
+- Whitespace removals, not much but I can't stand vim highlighting it [\#96](https://github.com/nubisproject/nubis-jumphost/pull/96) ([limed](https://github.com/limed))
+- Add nubis-travis v0.1.0 [\#93](https://github.com/nubisproject/nubis-jumphost/pull/93) ([gozer](https://github.com/gozer))
+- Update builder artifacts for v1.3.0-dev release [\#90](https://github.com/nubisproject/nubis-jumphost/pull/90) ([gozer](https://github.com/gozer))
+- Update builder artifacts for v1.2.3 release [\#89](https://github.com/nubisproject/nubis-jumphost/pull/89) ([gozer](https://github.com/gozer))
+
+## [v1.2.2](https://github.com/nubisproject/nubis-jumphost/tree/v1.2.2) (2016-08-02)
+[Full Changelog](https://github.com/nubisproject/nubis-jumphost/compare/v1.2.1...v1.2.2)
+
+**Closed issues:**
+
+- Tag v1.2.2 release [\#85](https://github.com/nubisproject/nubis-jumphost/issues/85)
+
+**Merged pull requests:**
+
+- Update CHANGELOG for v1.2.2 release [\#87](https://github.com/nubisproject/nubis-jumphost/pull/87) ([tinnightcap](https://github.com/tinnightcap))
 - Update builder artifacts for v1.2.2 release [\#86](https://github.com/nubisproject/nubis-jumphost/pull/86) ([tinnightcap](https://github.com/tinnightcap))
 
 ## [v1.2.1](https://github.com/nubisproject/nubis-jumphost/tree/v1.2.1) (2016-07-30)
