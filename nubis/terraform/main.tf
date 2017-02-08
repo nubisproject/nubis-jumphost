@@ -3,12 +3,10 @@ provider "aws" {
     region = "${var.aws_region}"
 }
 
-resource "atlas_artifact" "nubis-jumphost" {
+data "atlas_artifact" "nubis-jumphost" {
   count = "${var.enabled}"
   name = "nubisproject/nubis-jumphost"
   type = "amazon.image"
-
-  lifecycle { create_before_destroy = true }
 
   metadata {
         project_version = "${var.nubis_version}"
@@ -136,11 +134,7 @@ resource "aws_launch_configuration" "jumphost" {
 
     name_prefix = "${var.project}-${element(split(",",var.environments), count.index)}-${var.aws_region}-"
 
-    # Somewhat nasty, since Atlas doesn't have an elegant way to access the id for a region
-    # the id is "region:ami,region:ami,region:ami"
-    # so we split it all and find the index of the region
-    # add on, and pick that element
-    image_id = "${ element(split(",",replace(atlas_artifact.nubis-jumphost.id,":",",")) ,1 + index(split(",",replace(atlas_artifact.nubis-jumphost.id,":",",")), var.aws_region)) }"
+    image_id = "${data.atlas_artifact.nubis-jumphost.metadata_full["region-${var.aws_region}"]}"
 
     instance_type = "t2.nano"
     key_name = "${var.key_name}"
