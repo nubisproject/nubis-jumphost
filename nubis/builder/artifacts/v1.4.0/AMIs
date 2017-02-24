@@ -1,0 +1,23 @@
+amazon-ebs-amazon-linux:
+ap-northeast-1: ami-34e1aa53
+ap-northeast-2: ami-c005d5ae
+ap-southeast-1: ami-6474c507
+ap-southeast-2: ami-f1646792
+eu-central-1: ami-4470ba2b
+eu-west-1: ami-e51e3283
+sa-east-1: ami-a37e18cf
+us-east-1: ami-1cb7650a
+us-west-1: ami-d02d73b0
+us-west-2: ami-d2e665b2
+
+amazon-ebs-centos:
+ap-northeast-1: ami-4fe5ae28
+ap-northeast-2: ami-de04d4b0
+ap-southeast-1: ami-9d72c3fe
+ap-southeast-2: ami-de6566bd
+eu-central-1: ami-4273b92d
+eu-west-1: ami-fe1f3398
+sa-east-1: ami-997c1af5
+us-east-1: ami-27ba6831
+us-west-1: ami-432c7223
+us-west-2: ami-11ea6971
