@@ -1,6 +1,20 @@
 # Change Log
 
-## [v1.3.0](https://github.com/nubisproject/nubis-jumphost/tree/v1.3.0) (2016-12-20)
+## [v1.4.0](https://github.com/nubisproject/nubis-jumphost/tree/v1.4.0) (2017-03-23)
+[Full Changelog](https://github.com/nubisproject/nubis-jumphost/compare/v1.3.0...v1.4.0)
+
+**Closed issues:**
+
+- Disable detailled monitoring [\#114](https://github.com/nubisproject/nubis-jumphost/issues/114)
+
+**Merged pull requests:**
+
+- Disable EC2 Detailled monitoring [\#115](https://github.com/nubisproject/nubis-jumphost/pull/115) ([gozer](https://github.com/gozer))
+- Update builder artifacts for v1.4.0 release \[skip ci\] [\#113](https://github.com/nubisproject/nubis-jumphost/pull/113) ([tinnightcap](https://github.com/tinnightcap))
+- Terraform 0.8 Upgrade [\#112](https://github.com/nubisproject/nubis-jumphost/pull/112) ([gozer](https://github.com/gozer))
+- Update builder artifacts for v1.4.0-dev release [\#110](https://github.com/nubisproject/nubis-jumphost/pull/110) ([tinnightcap](https://github.com/tinnightcap))
+
+## [v1.3.0](https://github.com/nubisproject/nubis-jumphost/tree/v1.3.0) (2016-12-21)
 [Full Changelog](https://github.com/nubisproject/nubis-jumphost/compare/v1.2.2...v1.3.0)
 
 **Closed issues:**
@@ -8,9 +22,11 @@
 - Userdata input bubbling up [\#97](https://github.com/nubisproject/nubis-jumphost/issues/97)
 - Tag v1.2.3 release [\#88](https://github.com/nubisproject/nubis-jumphost/issues/88)
 - Use eip stack  [\#25](https://github.com/nubisproject/nubis-jumphost/issues/25)
+- Tag v1.3.0 release [\#107](https://github.com/nubisproject/nubis-jumphost/issues/107)
 
 **Merged pull requests:**
 
+- Update CHANGELOG for v1.3.0 release [\#109](https://github.com/nubisproject/nubis-jumphost/pull/109) ([tinnightcap](https://github.com/tinnightcap))
 - Update builder artifacts for v1.3.0 release [\#108](https://github.com/nubisproject/nubis-jumphost/pull/108) ([tinnightcap](https://github.com/tinnightcap))
 - Fix Links & Clean up lock file [\#106](https://github.com/nubisproject/nubis-jumphost/pull/106) ([tinnightcap](https://github.com/tinnightcap))
 - update nubis-travis to v0.1.3 [\#105](https://github.com/nubisproject/nubis-jumphost/pull/105) ([gozer](https://github.com/gozer))
