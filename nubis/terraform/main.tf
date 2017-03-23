@@ -139,6 +139,7 @@ resource "aws_launch_configuration" "jumphost" {
     instance_type = "t2.nano"
     key_name = "${var.key_name}"
     iam_instance_profile = "${element(aws_iam_instance_profile.jumphost.*.name, count.index)}"
+    enable_monitoring = false
 
     associate_public_ip_address = true
 
