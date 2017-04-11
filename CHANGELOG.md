@@ -6,9 +6,12 @@
 **Closed issues:**
 
 - Disable detailled monitoring [\#114](https://github.com/nubisproject/nubis-jumphost/issues/114)
+- Tag v1.4.0 release [\#111](https://github.com/nubisproject/nubis-jumphost/issues/111)
 
 **Merged pull requests:**
 
+- Merge v1.4.0 release into develop. \[skip ci\] [\#117](https://github.com/nubisproject/nubis-jumphost/pull/117) ([tinnightcap](https://github.com/tinnightcap))
+- Update CHANGELOG for v1.4.0 release \[skip ci\] [\#116](https://github.com/nubisproject/nubis-jumphost/pull/116) ([tinnightcap](https://github.com/tinnightcap))
 - Disable EC2 Detailled monitoring [\#115](https://github.com/nubisproject/nubis-jumphost/pull/115) ([gozer](https://github.com/gozer))
 - Update builder artifacts for v1.4.0 release \[skip ci\] [\#113](https://github.com/nubisproject/nubis-jumphost/pull/113) ([tinnightcap](https://github.com/tinnightcap))
 - Terraform 0.8 Upgrade [\#112](https://github.com/nubisproject/nubis-jumphost/pull/112) ([gozer](https://github.com/gozer))
