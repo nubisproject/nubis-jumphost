@@ -62,10 +62,10 @@ package { 'bigdecimal':
   ensure => ['1.2.0'],
 }
 package { 'bind-libs-lite':
-  ensure => '9.9.4-38.el7_3.2',
+  ensure => '9.9.4-38.el7_3.3',
 }
 package { 'bind-license':
-  ensure => '9.9.4-38.el7_3.2',
+  ensure => '9.9.4-38.el7_3.3',
 }
 package { 'binutils':
   ensure => '2.25.1-22.base.el7',
@@ -77,7 +77,7 @@ package { 'boto3':
   ensure => '1.4.4',
 }
 package { 'botocore':
-  ensure => '1.5.38',
+  ensure => '1.5.46',
 }
 package { 'btrfs-progs':
   ensure => '4.4.1-1.el7',
@@ -86,7 +86,7 @@ package { 'bzip2-libs':
   ensure => '1.0.6-13.el7',
 }
 package { 'ca-certificates':
-  ensure => '2015.2.6-73.el7',
+  ensure => '2017.2.11-70.1.el7_3',
 }
 package { 'centos-logos':
   ensure => '70.0.6-3.el7.centos',
@@ -164,7 +164,7 @@ package { 'daemonize':
   ensure => '1.7.7-1.el7',
 }
 package { 'datadog-agent':
-  ensure => '5.12.3-1',
+  ensure => '5.13.0-1',
 }
 package { 'dbus':
   ensure => '1.6.12-17.el7',
@@ -182,10 +182,10 @@ package { 'decorator':
   ensure => '3.4.0',
 }
 package { 'device-mapper':
-  ensure => '1.02.135-1.el7_3.3',
+  ensure => '1.02.135-1.el7_3.4',
 }
 package { 'device-mapper-libs':
-  ensure => '1.02.135-1.el7_3.3',
+  ensure => '1.02.135-1.el7_3.4',
 }
 package { 'dhclient':
   ensure => '4.2.5-47.el7.centos',
@@ -200,7 +200,7 @@ package { 'diffutils':
   ensure => '3.3-4.el7',
 }
 package { 'dmidecode':
-  ensure => '3.0-2.el7',
+  ensure => '3.0-2.1.el7_3',
 }
 package { 'dnsmasq':
   ensure => '2.66-21.el7',
@@ -229,6 +229,9 @@ package { 'e2fsprogs':
 package { 'e2fsprogs-libs':
   ensure => '1.42.9-9.el7',
 }
+package { 'ebtables':
+  ensure => '2.0.10-15.el7',
+}
 package { 'ed':
   ensure => '1.9-4.el7',
 }
@@ -250,6 +253,18 @@ package { 'expat':
 package { 'facter':
   ensure => '2.4.6-1.el7',
 }
+package { 'fail2ban':
+  ensure => '0.9.6-3.el7',
+}
+package { 'fail2ban-firewalld':
+  ensure => '0.9.6-3.el7',
+}
+package { 'fail2ban-sendmail':
+  ensure => '0.9.6-3.el7',
+}
+package { 'fail2ban-server':
+  ensure => '0.9.6-3.el7',
+}
 package { 'file':
   ensure => '5.11-33.el7',
 }
@@ -268,11 +283,17 @@ package { 'fipscheck':
 package { 'fipscheck-lib':
   ensure => '1.4.1-5.el7',
 }
+package { 'firewalld':
+  ensure => '0.4.3.2-8.1.el7_3.2',
+}
+package { 'firewalld-filesystem':
+  ensure => '0.4.3.2-8.1.el7_3.2',
+}
 package { 'freetype':
   ensure => '2.4.11-12.el7',
 }
 package { 'futures':
-  ensure => '3.0.5',
+  ensure => '3.1.1',
 }
 package { 'gawk':
   ensure => '4.0.2-4.el7',
@@ -338,7 +359,7 @@ package { 'grub2-tools':
   ensure => '2.02-0.44.el7.centos',
 }
 package { 'grubby':
-  ensure => '8.28-18.el7',
+  ensure => '8.28-21.el7_3',
 }
 package { 'gsettings-desktop-schemas':
   ensure => '3.14.2-1.el7',
@@ -368,13 +389,19 @@ package { 'iniparse':
   ensure => '0.4',
 }
 package { 'initscripts':
-  ensure => '9.49.37-1.el7',
+  ensure => '9.49.37-1.el7_3.1',
 }
 package { 'io-console':
   ensure => ['0.4.2'],
 }
 package { 'iproute':
   ensure => '3.10.0-74.el7',
+}
+package { 'ipset':
+  ensure => '6.19-6.el7',
+}
+package { 'ipset-libs':
+  ensure => '6.19-6.el7',
 }
 package { 'iptables':
   ensure => '1.4.21-17.el7',
@@ -383,7 +410,7 @@ package { 'iputils':
   ensure => '20160308-8.el7',
 }
 package { 'irqbalance':
-  ensure => '1.0.7-6.el7',
+  ensure => '1.0.7-6.el7_3.1',
 }
 package { 'iwl7265-firmware':
   ensure => '22.0.7.0-49.el7',
@@ -422,16 +449,16 @@ package { 'kbd-misc':
   ensure => '1.15.5-12.el7',
 }
 package { 'kernel':
-  ensure => '3.10.0-514.10.2.el7',
+  ensure => '3.10.0-514.16.1.el7',
 }
 package { 'kernel-headers':
-  ensure => '3.10.0-514.10.2.el7',
+  ensure => '3.10.0-514.16.1.el7',
 }
 package { 'kernel-tools':
-  ensure => '3.10.0-514.10.2.el7',
+  ensure => '3.10.0-514.16.1.el7',
 }
 package { 'kernel-tools-libs':
-  ensure => '3.10.0-514.10.2.el7',
+  ensure => '3.10.0-514.16.1.el7',
 }
 package { 'kexec-tools':
   ensure => '2.0.7-50.el7',
@@ -473,7 +500,7 @@ package { 'libbasicobjects':
   ensure => '0.1.1-27.el7',
 }
 package { 'libblkid':
-  ensure => '2.23.2-33.el7',
+  ensure => '2.23.2-33.el7_3.2',
 }
 package { 'libcap':
   ensure => '2.22-8.el7',
@@ -530,7 +557,7 @@ package { 'libgpg-error':
   ensure => '1.12-3.el7',
 }
 package { 'libgudev1':
-  ensure => '219-30.el7_3.7',
+  ensure => '219-30.el7_3.8',
 }
 package { 'libidn':
   ensure => '1.28-4.el7',
@@ -548,7 +575,7 @@ package { 'libmodman':
   ensure => '2.0.1-8.el7',
 }
 package { 'libmount':
-  ensure => '2.23.2-33.el7',
+  ensure => '2.23.2-33.el7_3.2',
 }
 package { 'libmpc':
   ensure => '1.0.1-3.el7',
@@ -653,7 +680,7 @@ package { 'libutempter':
   ensure => '1.1.6-4.el7',
 }
 package { 'libuuid':
-  ensure => '2.23.2-33.el7',
+  ensure => '2.23.2-33.el7_3.2',
 }
 package { 'libverto':
   ensure => '0.2.5-4.el7',
@@ -740,7 +767,7 @@ package { 'nspr':
   ensure => '4.13.1-1.0.el7_3',
 }
 package { 'nss':
-  ensure => '3.28.2-1.6.el7_3',
+  ensure => '3.28.4-1.0.el7_3',
 }
 package { 'nss-softokn':
   ensure => '3.16.2.3-14.4.el7',
@@ -749,19 +776,19 @@ package { 'nss-softokn-freebl':
   ensure => '3.16.2.3-14.4.el7',
 }
 package { 'nss-sysinit':
-  ensure => '3.28.2-1.6.el7_3',
+  ensure => '3.28.4-1.0.el7_3',
 }
 package { 'nss-tools':
-  ensure => '3.28.2-1.6.el7_3',
+  ensure => '3.28.4-1.0.el7_3',
 }
 package { 'nss-util':
-  ensure => '3.28.2-1.1.el7_3',
+  ensure => '3.28.4-1.0.el7_3',
 }
 package { 'ntp':
-  ensure => '4.2.6p5-25.el7.centos.1',
+  ensure => '4.2.6p5-25.el7.centos.2',
 }
 package { 'ntpdate':
-  ensure => '4.2.6p5-25.el7.centos.1',
+  ensure => '4.2.6p5-25.el7.centos.2',
 }
 package { 'numactl-libs':
   ensure => '2.0.9-6.el7_2',
@@ -773,13 +800,13 @@ package { 'openldap':
   ensure => '2.4.40-13.el7',
 }
 package { 'openssh':
-  ensure => '6.6.1p1-33.el7_3',
+  ensure => '6.6.1p1-35.el7_3',
 }
 package { 'openssh-clients':
-  ensure => '6.6.1p1-33.el7_3',
+  ensure => '6.6.1p1-35.el7_3',
 }
 package { 'openssh-server':
-  ensure => '6.6.1p1-33.el7_3',
+  ensure => '6.6.1p1-35.el7_3',
 }
 package { 'openssl':
   ensure => '1.0.1e-60.el7_3.1',
@@ -1006,6 +1033,9 @@ package { 'python-decorator':
 package { 'python-devel':
   ensure => '2.7.5-48.el7',
 }
+package { 'python-firewall':
+  ensure => '0.4.3.2-8.1.el7_3.2',
+}
 package { 'python-iniparse':
   ensure => '0.4-9.el7',
 }
@@ -1025,7 +1055,7 @@ package { 'python-markdown':
   ensure => '2.4.1-1.el7.centos',
 }
 package { 'python-perf':
-  ensure => '3.10.0-514.10.2.el7',
+  ensure => '3.10.0-514.16.1.el7',
 }
 package { 'python-pillow':
   ensure => '2.0.0-19.gitd1c6db8.el7',
@@ -1050,6 +1080,12 @@ package { 'python-setuptools':
 }
 package { 'python-six':
   ensure => '1.9.0-2.el7',
+}
+package { 'python-slip':
+  ensure => '0.4.0-2.el7',
+}
+package { 'python-slip-dbus':
+  ensure => '0.4.0-2.el7',
 }
 package { 'python-urlgrabber':
   ensure => '3.10-8.el7',
@@ -1201,6 +1237,12 @@ package { 'six':
 package { 'slang':
   ensure => '2.2.4-11.el7',
 }
+package { 'slip':
+  ensure => '0.4.0',
+}
+package { 'slip.dbus':
+  ensure => '0.4.0',
+}
 package { 'snappy':
   ensure => '1.1.0-3.el7',
 }
@@ -1214,13 +1256,16 @@ package { 'sudo':
   ensure => '1.8.6p7-21.el7_3',
 }
 package { 'systemd':
-  ensure => '219-30.el7_3.7',
+  ensure => '219-30.el7_3.8',
 }
 package { 'systemd-libs':
-  ensure => '219-30.el7_3.7',
+  ensure => '219-30.el7_3.8',
+}
+package { 'systemd-python':
+  ensure => '219-30.el7_3.8',
 }
 package { 'systemd-sysv':
-  ensure => '219-30.el7_3.7',
+  ensure => '219-30.el7_3.8',
 }
 package { 'sysvinit-tools':
   ensure => '2.88-14.dsf.el7',
@@ -1265,7 +1310,7 @@ package { 'ustr':
   ensure => '1.0.4-16.el7',
 }
 package { 'util-linux':
-  ensure => '2.23.2-33.el7',
+  ensure => '2.23.2-33.el7_3.2',
 }
 package { 'vim-minimal':
   ensure => '7.4.160-1.el7_3.1',

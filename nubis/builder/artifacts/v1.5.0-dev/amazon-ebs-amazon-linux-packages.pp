@@ -86,10 +86,10 @@ package { 'bigdecimal':
   ensure => ['1.2.0'],
 }
 package { 'bind-libs':
-  ensure => '9.8.2-0.47.rc1.52.amzn1',
+  ensure => '9.8.2-0.62.rc1.54.amzn1',
 }
 package { 'bind-utils':
-  ensure => '9.8.2-0.47.rc1.52.amzn1',
+  ensure => '9.8.2-0.62.rc1.54.amzn1',
 }
 package { 'binutils':
   ensure => '2.23.52.0.1-55.65.amzn1',
@@ -101,7 +101,7 @@ package { 'boto3':
   ensure => '1.4.4',
 }
 package { 'botocore':
-  ensure => '1.5.38',
+  ensure => '1.5.46',
 }
 package { 'bzip2':
   ensure => '1.0.6-8.12.amzn1',
@@ -188,7 +188,7 @@ package { 'dash':
   ensure => '0.5.5.1-4.5.amzn1',
 }
 package { 'datadog-agent':
-  ensure => '5.12.3-1',
+  ensure => '5.13.0-1',
 }
 package { 'db4':
   ensure => '4.7.25-18.11.amzn1',
@@ -301,6 +301,9 @@ package { 'expat':
 package { 'facter2':
   ensure => '2.2.0-1.7.amzn1',
 }
+package { 'fail2ban':
+  ensure => '0.8.10-3.6.amzn1',
+}
 package { 'file':
   ensure => '5.22-4.31.amzn1',
 }
@@ -330,6 +333,12 @@ package { 'freetype':
 }
 package { 'futures':
   ensure => '3.0.3',
+}
+package { 'gamin':
+  ensure => '0.1.10-16.14.amzn1',
+}
+package { 'gamin-python':
+  ensure => '0.1.10-16.14.amzn1',
 }
 package { 'gawk':
   ensure => '3.1.7-10.10.amzn1',
@@ -386,7 +395,7 @@ package { 'gnupg2':
   ensure => '2.0.28-1.30.amzn1',
 }
 package { 'gpg-pubkey':
-  ensure => '0608b895-4bd22942',
+  ensure => 'e09422b3-57744e9e',
 }
 package { 'gpgme':
   ensure => '1.4.3-5.15.amzn1',
@@ -479,13 +488,13 @@ package { 'kbd-misc':
   ensure => '1.15-11.4.amzn1',
 }
 package { 'kernel':
-  ensure => '4.9.20-10.30.amzn1',
+  ensure => '4.9.20-11.31.amzn1',
 }
 package { 'kernel-headers':
-  ensure => '4.9.20-10.30.amzn1',
+  ensure => '4.9.20-11.31.amzn1',
 }
 package { 'kernel-tools':
-  ensure => '4.9.20-10.30.amzn1',
+  ensure => '4.9.20-11.31.amzn1',
 }
 package { 'keyutils':
   ensure => '1.5.8-3.12.amzn1',
@@ -560,7 +569,7 @@ package { 'libattr':
   ensure => '2.4.46-12.10.amzn1',
 }
 package { 'libblkid':
-  ensure => '2.23.2-26.27.amzn1',
+  ensure => '2.23.2-33.28.amzn1',
 }
 package { 'libcap':
   ensure => '2.16-5.5.8.amzn1',
@@ -617,7 +626,7 @@ package { 'libjpeg-turbo':
   ensure => '1.2.90-5.14.amzn1',
 }
 package { 'libmount':
-  ensure => '2.23.2-26.27.amzn1',
+  ensure => '2.23.2-33.28.amzn1',
 }
 package { 'libmpc':
   ensure => '1.0.1-3.3.amzn1',
@@ -686,7 +695,7 @@ package { 'libutempter':
   ensure => '1.1.5-4.1.6.amzn1',
 }
 package { 'libuuid':
-  ensure => '2.23.2-26.27.amzn1',
+  ensure => '2.23.2-33.28.amzn1',
 }
 package { 'libverto':
   ensure => '0.2.5-4.9.amzn1',
@@ -785,10 +794,10 @@ package { 'nfs-utils':
   ensure => '1.3.0-0.21.amzn1',
 }
 package { 'nspr':
-  ensure => '4.11.0-1.37.amzn1',
+  ensure => '4.13.1-1.0.39.amzn1',
 }
 package { 'nss':
-  ensure => '3.21.3-2.77.amzn1',
+  ensure => '3.28.4-1.0.78.amzn1',
 }
 package { 'nss-softokn':
   ensure => '3.16.2.3-14.4.39.amzn1',
@@ -797,19 +806,19 @@ package { 'nss-softokn-freebl':
   ensure => '3.16.2.3-14.4.39.amzn1',
 }
 package { 'nss-sysinit':
-  ensure => '3.21.3-2.77.amzn1',
+  ensure => '3.28.4-1.0.78.amzn1',
 }
 package { 'nss-tools':
-  ensure => '3.21.3-2.77.amzn1',
+  ensure => '3.28.4-1.0.78.amzn1',
 }
 package { 'nss-util':
-  ensure => '3.21.3-1.1.51.amzn1',
+  ensure => '3.28.4-1.0.52.amzn1',
 }
 package { 'ntp':
-  ensure => '4.2.6p5-43.33.amzn1',
+  ensure => '4.2.6p5-44.34.amzn1',
 }
 package { 'ntpdate':
-  ensure => '4.2.6p5-43.33.amzn1',
+  ensure => '4.2.6p5-44.34.amzn1',
 }
 package { 'ntsysv':
   ensure => '1.3.49.3-2.14.amzn1',
@@ -1057,6 +1066,9 @@ package { 'pycurl':
 package { 'pygpgme':
   ensure => '0.3',
 }
+package { 'pyinotify':
+  ensure => '0.9.1',
+}
 package { 'pyliblzma':
   ensure => '0.5.3',
 }
@@ -1125,6 +1137,9 @@ package { 'python27-imaging':
 }
 package { 'python27-iniparse':
   ensure => '0.3.1-2.1.9.amzn1',
+}
+package { 'python27-inotify':
+  ensure => '0.9.1-1.7.amzn1',
 }
 package { 'python27-jinja2':
   ensure => '2.7.2-2.15.amzn1',
@@ -1400,7 +1415,7 @@ package { 'ustr':
   ensure => '1.0.4-9.1.6.amzn1',
 }
 package { 'util-linux':
-  ensure => '2.23.2-26.27.amzn1',
+  ensure => '2.23.2-33.28.amzn1',
 }
 package { 'vim-common':
   ensure => '8.0.0503-1.45.amzn1',
