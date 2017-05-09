@@ -20,11 +20,6 @@ fi
 # Source the consul connection details from the metadata api
 eval "$(curl -s -fq http://169.254.169.254/latest/user-data)"
 
-# Check to see if NUBIS_MIGRATE was set in userdata. If not we exit quietly.
-if [ "${NUBIS_MIGRATE:-0}" == '0' ]; then
-    exit 0
-fi
-
 # Set up the consul url
 CONSUL="http://localhost:8500/v1/kv/$NUBIS_STACK/$NUBIS_ENVIRONMENT/config"
 
