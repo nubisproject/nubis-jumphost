@@ -44,7 +44,7 @@ package { 'autogen-libopts':
   ensure => '5.18-5.8.amzn1',
 }
 package { 'aws-amitools-ec2':
-  ensure => '1.5.12-0.1.amzn1',
+  ensure => '1.5.13-0.2.amzn1',
 }
 package { 'aws-apitools-as':
   ensure => '1.0.61.6-1.0.amzn1',
@@ -65,10 +65,10 @@ package { 'aws-cfn-bootstrap':
   ensure => '1.4-15.9.amzn1',
 }
 package { 'aws-cli':
-  ensure => '1.11.29-1.45.amzn1',
+  ensure => '1.11.83-1.46.amzn1',
 }
 package { 'awscli':
-  ensure => '1.11.29',
+  ensure => '1.11.83',
 }
 package { 'backports.ssl-match-hostname':
   ensure => '3.4.0.2',
@@ -86,10 +86,10 @@ package { 'bigdecimal':
   ensure => ['1.2.0'],
 }
 package { 'bind-libs':
-  ensure => '9.8.2-0.62.rc1.54.amzn1',
+  ensure => '9.8.2-0.62.rc1.55.amzn1',
 }
 package { 'bind-utils':
-  ensure => '9.8.2-0.62.rc1.54.amzn1',
+  ensure => '9.8.2-0.62.rc1.55.amzn1',
 }
 package { 'binutils':
   ensure => '2.23.52.0.1-55.65.amzn1',
@@ -112,8 +112,11 @@ package { 'bzip2-libs':
 package { 'ca-certificates':
   ensure => '2015.2.6-65.0.1.16.amzn1',
 }
+package { 'certifi':
+  ensure => '2017.4.17',
+}
 package { 'chardet':
-  ensure => '2.0.1',
+  ensure => '3.0.4',
 }
 package { 'checkpolicy':
   ensure => '2.1.10-1.9.amzn1',
@@ -186,9 +189,6 @@ package { 'daemonize':
 }
 package { 'dash':
   ensure => '0.5.5.1-4.5.amzn1',
-}
-package { 'datadog-agent':
-  ensure => '5.13.0-1',
 }
 package { 'db4':
   ensure => '4.7.25-18.11.amzn1',
@@ -264,9 +264,6 @@ package { 'dracut-modules-growroot':
 }
 package { 'dump':
   ensure => '0.4-0.6.b42.7.amzn1',
-}
-package { 'duo_unix':
-  ensure => '1.9.11-1',
 }
 package { 'e2fsprogs':
   ensure => '1.42.12-4.40.amzn1',
@@ -395,7 +392,7 @@ package { 'gnupg2':
   ensure => '2.0.28-1.30.amzn1',
 }
 package { 'gpg-pubkey':
-  ensure => 'e09422b3-57744e9e',
+  ensure => '0608b895-4bd22942',
 }
 package { 'gpgme':
   ensure => '1.4.3-5.15.amzn1',
@@ -433,6 +430,9 @@ package { 'hmaccalc':
 package { 'hwdata':
   ensure => '0.233-14.1.18.amzn1',
 }
+package { 'idna':
+  ensure => '2.5',
+}
 package { 'info':
   ensure => '5.1-4.10.amzn1',
 }
@@ -455,22 +455,16 @@ package { 'irqbalance':
   ensure => '1.1.0-1.24.amzn1',
 }
 package { 'java-1.7.0-openjdk':
-  ensure => '1.7.0.131-2.6.9.0.71.amzn1',
+  ensure => '1.7.0.141-2.6.10.1.73.amzn1',
 }
 package { 'javapackages-tools':
   ensure => '0.9.1-1.5.amzn1',
 }
 package { 'jmespath':
-  ensure => '0.9.0',
+  ensure => '0.9.2',
 }
 package { 'jpackage-utils':
   ensure => '1.7.5-27.17.amzn1',
-}
-package { 'jq':
-  ensure => '1.5-1.2.amzn1',
-}
-package { 'jq-libs':
-  ensure => '1.5-1.2.amzn1',
 }
 package { 'json':
   ensure => ['1.8.3'],
@@ -488,13 +482,13 @@ package { 'kbd-misc':
   ensure => '1.15-11.4.amzn1',
 }
 package { 'kernel':
-  ensure => '4.9.20-11.31.amzn1',
+  ensure => '4.9.27-14.31.amzn1',
 }
 package { 'kernel-headers':
-  ensure => '4.9.20-11.31.amzn1',
+  ensure => '4.9.27-14.31.amzn1',
 }
 package { 'kernel-tools':
-  ensure => '4.9.20-11.31.amzn1',
+  ensure => '4.9.27-14.31.amzn1',
 }
 package { 'keyutils':
   ensure => '1.5.8-3.12.amzn1',
@@ -680,7 +674,7 @@ package { 'libtasn1':
   ensure => '2.3-6.6.amzn1',
 }
 package { 'libtirpc':
-  ensure => '0.2.4-0.3.13.amzn1',
+  ensure => '0.2.4-0.8.14.amzn1',
 }
 package { 'libudev':
   ensure => '173-4.13.amzn1',
@@ -764,7 +758,7 @@ package { 'mpfr':
   ensure => '3.1.1-4.14.amzn1',
 }
 package { 'mysql55-libs':
-  ensure => '5.5.54-1.16.amzn1',
+  ensure => '5.5.56-1.17.amzn1',
 }
 package { 'nano':
   ensure => '2.5.3-1.19.amzn1',
@@ -825,9 +819,6 @@ package { 'ntsysv':
 }
 package { 'numactl':
   ensure => '2.0.7-8.11.amzn1',
-}
-package { 'oniguruma':
-  ensure => '5.9.1-3.1.2.amzn1',
 }
 package { 'openldap':
   ensure => '2.4.40-12.30.amzn1',
@@ -1031,7 +1022,7 @@ package { 'postfix':
   ensure => '2.6.6-2.15.amzn1',
 }
 package { 'postgresql92-libs':
-  ensure => '9.2.18-1.59.amzn1',
+  ensure => '9.2.21-1.60.amzn1',
 }
 package { 'procmail':
   ensure => '3.22-25.1.6.amzn1',
@@ -1100,7 +1091,7 @@ package { 'python27-boto':
   ensure => '2.42.0-1.1.amzn1',
 }
 package { 'python27-botocore':
-  ensure => '1.4.86-1.62.amzn1',
+  ensure => '1.5.46-1.63.amzn1',
 }
 package { 'python27-chardet':
   ensure => '2.0.1-7.7.amzn1',
@@ -1145,7 +1136,7 @@ package { 'python27-jinja2':
   ensure => '2.7.2-2.15.amzn1',
 }
 package { 'python27-jmespath':
-  ensure => '0.9.0-1.11.amzn1',
+  ensure => '0.9.2-1.12.amzn1',
 }
 package { 'python27-jsonpatch':
   ensure => '1.2-2.5.amzn1',
@@ -1235,7 +1226,7 @@ package { 'redhat-lsb-core':
   ensure => '4.0-7.14.amzn1',
 }
 package { 'requests':
-  ensure => '2.13.0',
+  ensure => '2.17.3',
 }
 package { 'rmt':
   ensure => '0.4-0.6.b42.7.amzn1',
@@ -1247,7 +1238,7 @@ package { 'rootfiles':
   ensure => '8.1-6.1.8.amzn1',
 }
 package { 'rpcbind':
-  ensure => '0.2.0-11.8.amzn1',
+  ensure => '0.2.0-13.9.amzn1',
 }
 package { 'rpm':
   ensure => '4.11.3-21.75.amzn1',
@@ -1346,7 +1337,7 @@ package { 'sqlite':
   ensure => '3.7.17-6.13.amzn1',
 }
 package { 'sudo':
-  ensure => '1.8.6p3-25.23.amzn1',
+  ensure => '1.8.6p3-28.25.amzn1',
 }
 package { 'sysctl-defaults':
   ensure => '1.0-1.1.amzn1',
@@ -1373,7 +1364,7 @@ package { 'tcp_wrappers-libs':
   ensure => '7.6-77.12.amzn1',
 }
 package { 'td-agent':
-  ensure => '2.3.4-1.el2016',
+  ensure => '2.3.5-1.el2017',
 }
 package { 'time':
   ensure => '1.7-38.9.amzn1',
@@ -1409,7 +1400,7 @@ package { 'urlgrabber':
   ensure => '3.10',
 }
 package { 'urllib3':
-  ensure => '1.8.2',
+  ensure => '1.21.1',
 }
 package { 'ustr':
   ensure => '1.0.4-9.1.6.amzn1',
