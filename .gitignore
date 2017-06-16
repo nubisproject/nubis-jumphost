@@ -3,3 +3,4 @@ nubis/cloudformation/parameters*
 !nubis/cloudformation/parameters.json-dist
 .~lock.*
 nubis/builder/artifacts/AMIs.json
+nubis/builder/artifacts/*-dev/
