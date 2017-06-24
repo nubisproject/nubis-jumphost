@@ -1,16 +1,31 @@
 # Change Log
 
-## [v1.4.2](https://github.com/nubisproject/nubis-jumphost/tree/v1.4.2) (2017-05-04)
+## [v1.5.0](https://github.com/nubisproject/nubis-jumphost/tree/v1.5.0) (2017-06-24)
+[Full Changelog](https://github.com/nubisproject/nubis-jumphost/compare/v1.4.2...v1.5.0)
+
+**Merged pull requests:**
+
+- Remove duo as it is included in nubis-base now [\#133](https://github.com/nubisproject/nubis-jumphost/pull/133) ([tinnightcap](https://github.com/tinnightcap))
+- remove NUBIS\_MIGRATE [\#132](https://github.com/nubisproject/nubis-jumphost/pull/132) ([gozer](https://github.com/gozer))
+
+## [v1.4.2](https://github.com/nubisproject/nubis-jumphost/tree/v1.4.2) (2017-05-09)
 [Full Changelog](https://github.com/nubisproject/nubis-jumphost/compare/v1.4.1...v1.4.2)
 
 **Closed issues:**
 
 - Add nubis/builder/artifacts/AMIs.json to .gitignore [\#123](https://github.com/nubisproject/nubis-jumphost/issues/123)
 - Get rid of NUBIS\_MIGRATE, it was never a good idea [\#121](https://github.com/nubisproject/nubis-jumphost/issues/121)
+- Include fail2ban for increased SSH security [\#102](https://github.com/nubisproject/nubis-jumphost/issues/102)
 - IAM policy too broad [\#37](https://github.com/nubisproject/nubis-jumphost/issues/37)
+- Tag v1.4.2 release [\#125](https://github.com/nubisproject/nubis-jumphost/issues/125)
 
 **Merged pull requests:**
 
+- add NUBIS\_MIGRATE back [\#131](https://github.com/nubisproject/nubis-jumphost/pull/131) ([gozer](https://github.com/gozer))
+- Get rid of NUBIS\_MIGRATE [\#130](https://github.com/nubisproject/nubis-jumphost/pull/130) ([gozer](https://github.com/gozer))
+- Add and enable fail2ban on jumphosts [\#129](https://github.com/nubisproject/nubis-jumphost/pull/129) ([gozer](https://github.com/gozer))
+- Merge v1.4.2 release into develop. \[skip ci\] [\#128](https://github.com/nubisproject/nubis-jumphost/pull/128) ([tinnightcap](https://github.com/tinnightcap))
+- Update CHANGELOG for v1.4.2 release \[skip ci\] [\#127](https://github.com/nubisproject/nubis-jumphost/pull/127) ([tinnightcap](https://github.com/tinnightcap))
 - Add nubis/builder/artifacts/AMIs.json to .gitignore [\#124](https://github.com/nubisproject/nubis-jumphost/pull/124) ([gozer](https://github.com/gozer))
 - Get rid of NUBIS\_MIGRATE [\#122](https://github.com/nubisproject/nubis-jumphost/pull/122) ([gozer](https://github.com/gozer))
 
