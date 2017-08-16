@@ -3,37 +3,34 @@ provider "aws" {
     region = "${var.aws_region}"
 }
 
-data "atlas_artifact" "nubis-jumphost" {
-  count = "${var.enabled}"
-  name = "nubisproject/nubis-jumphost"
-  type = "amazon.image"
+module "image" {
+  source = "github.com/gozer/nubis-deploy//modules/images?ref=feature%2Farena"
 
-  metadata {
-        project_version = "${var.nubis_version}"
-        build_name = "amazon-ebs-amazon-linux"
-    }
+  region = "${var.aws_region}"
+  version = "${var.nubis_version}"
+  project = "nubis-jumphost"
 }
 
 resource "aws_eip" "jumphost" {
     lifecycle { create_before_destroy = true }
-    count = "${var.enabled * length(split(",", var.environments))}"
+    count = "${var.enabled * length(var.arenas)}"
     vpc = true
 }
 
 resource "aws_route53_record" "ui" {
-   count = "${var.enabled * length(split(",", var.environments))}"
+   count = "${var.enabled * length(var.arenas)}"
    zone_id = "${var.zone_id}"
-   name = "jumphost.${element(split(",",var.environments), count.index)}"
+   name = "jumphost.${var.arenas[count.index]}"
    type = "A"
    ttl = "120"
    records = ["${element(aws_eip.jumphost.*.public_ip, count.index)}"]
 }
 
 resource "aws_security_group" "jumphost" {
-  count = "${var.enabled * length(split(",", var.environments))}"
+  count = "${var.enabled * length(var.arenas)}"
   lifecycle { create_before_destroy = true }
 
-  name_prefix = "${var.project}-${element(split(",",var.environments), count.index)}-"
+  name_prefix = "${var.project}-${var.arenas[count.index]}-"
   description = "Jumphost for SSH"
 
   vpc_id = "${element(split(",",var.vpc_ids), count.index)}"
@@ -61,30 +58,31 @@ resource "aws_security_group" "jumphost" {
   }
 
   tags = {
-    Name = "${var.project}-${element(split(",",var.environments), count.index)}"
+    Name = "${var.project}-${var.arenas[count.index]}"
     Region = "${var.aws_region}"
-    Environment = "${element(split(",",var.environments), count.index)}"
+    Environment = "${var.arenas[count.index]}"
+    Arena = "${var.arenas[count.index]}"
     TecnnicalContact = "${var.technical_contact}"
   }
 }
 
 resource "aws_iam_instance_profile" "jumphost" {
-    count = "${var.enabled * length(split(",", var.environments))}"
+    count = "${var.enabled * length(var.arenas)}"
     lifecycle { create_before_destroy = true }
 
     provisioner "local-exec" {
       command = "sleep 10"
     }
 
-    name = "${var.project}-${element(split(",",var.environments), count.index)}-${var.aws_region}"
+    name = "${var.project}-${var.arenas[count.index]}-${var.aws_region}"
     role = "${element(aws_iam_role.jumphost.*.name, count.index)}"
 }
 
 resource "aws_iam_role" "jumphost" {
-  count = "${var.enabled * length(split(",", var.environments))}"
+  count = "${var.enabled * length(var.arenas)}"
   lifecycle { create_before_destroy = true }
 
-  name = "${var.project}-${element(split(",",var.environments), count.index)}-${var.aws_region}"
+  name = "${var.project}-${var.arenas[count.index]}-${var.aws_region}"
   path = "/nubis/${var.project}/"
     assume_role_policy = <<POLICY
 {
@@ -104,9 +102,9 @@ POLICY
 }
 
 resource "aws_iam_role_policy" "jumphost" {
-    count = "${var.enabled * length(split(",", var.environments))}"
+    count = "${var.enabled * length(var.arenas)}"
     lifecycle { create_before_destroy = true }
-    name = "${var.project}-${element(split(",",var.environments), count.index)}-${var.aws_region}"
+    name = "${var.project}-${var.arenas[count.index]}-${var.aws_region}"
     role = "${element(aws_iam_role.jumphost.*.id, count.index)}"
     policy = <<EOF
 {
@@ -126,13 +124,13 @@ EOF
 }
 
 resource "aws_launch_configuration" "jumphost" {
-    count = "${var.enabled * length(split(",", var.environments))}"
+    count = "${var.enabled * length(var.arenas)}"
 
     lifecycle { create_before_destroy = true }
 
-    name_prefix = "${var.project}-${element(split(",",var.environments), count.index)}-${var.aws_region}-"
+    name_prefix = "${var.project}-${var.arenas[count.index]}-${var.aws_region}-"
 
-    image_id = "${data.atlas_artifact.nubis-jumphost.metadata_full["region-${var.aws_region}"]}"
+    image_id = "${module.image.image_id}"
 
     instance_type = "t2.nano"
     key_name = "${var.key_name}"
@@ -150,7 +148,8 @@ resource "aws_launch_configuration" "jumphost" {
 
     user_data = <<EOF
 NUBIS_PROJECT=${var.project}
-NUBIS_ENVIRONMENT=${element(split(",",var.environments), count.index)}
+NUBIS_ENVIRONMENT=${var.arenas[count.index]}
+NUBIS_ARENA=${var.arenas[count.index]}
 NUBIS_ACCOUNT=${var.service_name}
 NUBIS_DOMAIN=${var.nubis_domain}
 NUBIS_JUMPHOST_EIP=${element(aws_eip.jumphost.*.id,count.index)}
@@ -161,7 +160,7 @@ EOF
 }
 
 resource "aws_autoscaling_group" "jumphost" {
-  count = "${var.enabled * length(split(",", var.environments))}"
+  count = "${var.enabled * length(var.arenas)}"
   lifecycle { create_before_destroy = true }
 
   #XXX: Fugly, assumes 3 subnets per environments, bad assumption, but valid ATM
@@ -171,7 +170,7 @@ resource "aws_autoscaling_group" "jumphost" {
     "${element(split(",",var.public_subnet_ids), (count.index * 3) + 2 )}",
   ]
 
-  name = "${var.project}-${element(split(",",var.environments), count.index)} (LC ${element(aws_launch_configuration.jumphost.*.name, count.index)})"
+  name = "${var.project}-${var.arenas[count.index]} (LC ${element(aws_launch_configuration.jumphost.*.name, count.index)})"
   max_size = "2"
   min_size = "1"
   health_check_grace_period = 10
@@ -184,7 +183,7 @@ resource "aws_autoscaling_group" "jumphost" {
 
   tag {
     key = "Name"
-    value = "Jumphost (${var.nubis_version}) for ${var.service_name} in ${element(split(",",var.environments), count.index)}"
+    value = "Jumphost (${var.nubis_version}) for ${var.service_name} in ${var.arenas[count.index]}"
     propagate_at_launch = true
   }
   tag {
