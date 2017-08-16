@@ -77,9 +77,7 @@ resource "aws_iam_instance_profile" "jumphost" {
     }
 
     name = "${var.project}-${element(split(",",var.environments), count.index)}-${var.aws_region}"
-    roles = [
-      "${element(aws_iam_role.jumphost.*.name, count.index)}",
-    ]
+    role = "${element(aws_iam_role.jumphost.*.name, count.index)}"
 }
 
 resource "aws_iam_role" "jumphost" {
