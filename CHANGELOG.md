@@ -3,8 +3,14 @@
 ## [v1.5.0](https://github.com/nubisproject/nubis-jumphost/tree/v1.5.0) (2017-06-24)
 [Full Changelog](https://github.com/nubisproject/nubis-jumphost/compare/v1.4.2...v1.5.0)
 
+**Closed issues:**
+
+- Tag v1.5.0 release [\#134](https://github.com/nubisproject/nubis-jumphost/issues/134)
+
 **Merged pull requests:**
 
+- Merge v1.5.0 release into develop. \[skip ci\] [\#136](https://github.com/nubisproject/nubis-jumphost/pull/136) ([tinnightcap](https://github.com/tinnightcap))
+- Update CHANGELOG for v1.5.0 release \[skip ci\] [\#135](https://github.com/nubisproject/nubis-jumphost/pull/135) ([tinnightcap](https://github.com/tinnightcap))
 - Remove duo as it is included in nubis-base now [\#133](https://github.com/nubisproject/nubis-jumphost/pull/133) ([tinnightcap](https://github.com/tinnightcap))
 - remove NUBIS\_MIGRATE [\#132](https://github.com/nubisproject/nubis-jumphost/pull/132) ([gozer](https://github.com/gozer))
 
