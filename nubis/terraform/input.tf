@@ -1,4 +1,3 @@
-variable aws_profile {}
 variable aws_region {}
 
 variable key_name {}

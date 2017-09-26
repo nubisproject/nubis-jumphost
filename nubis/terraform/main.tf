@@ -1,5 +1,4 @@
 provider "aws" {
-    profile = "${var.aws_profile}"
     region = "${var.aws_region}"
 }
 
@@ -9,6 +8,7 @@ module "image" {
   region = "${var.aws_region}"
   version = "${var.nubis_version}"
   project = "nubis-jumphost"
+  os = "amazon-linux"
 }
 
 resource "aws_eip" "jumphost" {
@@ -60,7 +60,6 @@ resource "aws_security_group" "jumphost" {
   tags = {
     Name = "${var.project}-${var.arenas[count.index]}"
     Region = "${var.aws_region}"
-    Environment = "${var.arenas[count.index]}"
     Arena = "${var.arenas[count.index]}"
     TecnnicalContact = "${var.technical_contact}"
   }
@@ -148,12 +147,10 @@ resource "aws_launch_configuration" "jumphost" {
 
     user_data = <<EOF
 NUBIS_PROJECT=${var.project}
-NUBIS_ENVIRONMENT=${var.arenas[count.index]}
 NUBIS_ARENA=${var.arenas[count.index]}
 NUBIS_ACCOUNT=${var.service_name}
 NUBIS_DOMAIN=${var.nubis_domain}
 NUBIS_JUMPHOST_EIP=${element(aws_eip.jumphost.*.id,count.index)}
-NUBIS_MIGRATE=1
 NUBIS_SUDO_GROUPS="${var.nubis_sudo_groups}"
 NUBIS_USER_GROUPS="${var.nubis_user_groups}"
 EOF
@@ -163,7 +160,7 @@ resource "aws_autoscaling_group" "jumphost" {
   count = "${var.enabled * length(var.arenas)}"
   lifecycle { create_before_destroy = true }
 
-  #XXX: Fugly, assumes 3 subnets per environments, bad assumption, but valid ATM
+  #XXX: Fugly, assumes 3 subnets per arenas, bad assumption, but valid ATM
   vpc_zone_identifier = [
     "${element(split(",",var.public_subnet_ids), (count.index * 3) + 0 )}",
     "${element(split(",",var.public_subnet_ids), (count.index * 3) + 1 )}",
