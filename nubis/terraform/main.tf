@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 module "image" {
-  source = "github.com/gozer/nubis-deploy//modules/images?ref=feature%2Farena"
+  source = "github.com/nubisproject/nubis-deploy//modules/images?ref=develop"
 
   region = "${var.aws_region}"
   version = "${var.nubis_version}"
