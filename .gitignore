@@ -4,3 +4,9 @@ nubis/cloudformation/parameters*
 .~lock.*
 nubis/builder/artifacts/AMIs.json
 nubis/builder/artifacts/*-dev/
+nubis/librarian-puppet.tar.gz
+nubis/librarian-puppet
+nubis/Puppetfile.lock
+nubis/.tmp
+nubis/.librarian
+

@@ -1,0 +1,36 @@
+#!/bin/bash
+
+LOGGER_BIN='/usr/bin/logger'
+
+# Set up the logger command if the binary is installed
+if [ ! -x $LOGGER_BIN ]; then
+    echo "ERROR: 'logger' binary not found - Aborting"
+    #shellcheck disable=SC2128
+    echo "ERROR: '$BASH_SOURCE' Line: '$LINENO'"
+exit 2
+else
+    LOGGER="$LOGGER_BIN --stderr --priority local7.info --tag migrate"
+fi
+
+instance_id=$(curl -s -fq http://169.254.169.254/latest/meta-data/instance-id)
+local_ip=$(curl -s -fq http://169.254.169.254/latest/meta-data/local-ipv4)
+
+EC2_REGION=$(nubis-region)
+
+# First, check with user-data to see if we can find our IP
+if [ -z "${elasticip_id}" ]; then
+  elasticip_id=$(nubis-metadata NUBIS_JUMPHOST_EIP)
+fi
+
+if [[ -z "${instance_id}" ]]; then
+    $LOGGER "ERROR: Instance ID not found"
+    exit 1
+fi
+
+aws ec2 associate-address --instance-id "${instance_id}" --allocation-id "${elasticip_id}" --private-ip-address "${local_ip}" --region "${EC2_REGION}"
+RV=$?
+
+if [[ ${RV} != 0 ]]; then
+    $LOGGER "ERROR: Unable to associate elastic IP ${elasticip_id} to instance ${instance_id}"
+    exit 1
+fi

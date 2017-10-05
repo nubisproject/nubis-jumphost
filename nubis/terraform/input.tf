@@ -1,4 +1,3 @@
-variable aws_profile {}
 variable aws_region {}
 
 variable key_name {}
@@ -6,7 +5,9 @@ variable nubis_version {}
 variable nubis_domain {}
 variable service_name {}
 
-variable environments {}
+variable arenas {
+  type = "list"
+}
 
 variable enabled {}
 
