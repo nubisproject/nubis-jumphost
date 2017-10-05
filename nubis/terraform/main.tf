@@ -178,6 +178,17 @@ resource "aws_autoscaling_group" "jumphost" {
 
   wait_for_capacity_timeout = "60m"
 
+  enabled_metrics = [
+    "GroupMinSize",
+    "GroupMaxSize",
+    "GroupDesiredCapacity",
+    "GroupInServiceInstances",
+    "GroupPendingInstances",
+    "GroupStandbyInstances",
+    "GroupTerminatingInstances",
+    "GroupTotalInstances",
+  ]
+
   tag {
     key = "Name"
     value = "Jumphost (${var.nubis_version}) for ${var.service_name} in ${var.arenas[count.index]}"
