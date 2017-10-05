@@ -1,5 +1,26 @@
 # Change Log
 
+## [v2.0.0](https://github.com/nubisproject/nubis-jumphost/tree/v2.0.0) (2017-10-05)
+[Full Changelog](https://github.com/nubisproject/nubis-jumphost/compare/v1.5.1...v2.0.0)
+
+**Merged pull requests:**
+
+- Convert over to Arenas [\#142](https://github.com/nubisproject/nubis-jumphost/pull/142) ([gozer](https://github.com/gozer))
+- Update nubis-travis to v1.4.2 [\#141](https://github.com/nubisproject/nubis-jumphost/pull/141) ([tinnightcap](https://github.com/tinnightcap))
+- Migrate to mozilla slack [\#140](https://github.com/nubisproject/nubis-jumphost/pull/140) ([tinnightcap](https://github.com/tinnightcap))
+
+## [v1.5.1](https://github.com/nubisproject/nubis-jumphost/tree/v1.5.1) (2017-08-18)
+[Full Changelog](https://github.com/nubisproject/nubis-jumphost/compare/v1.5.0...v1.5.1)
+
+**Closed issues:**
+
+- Tag v1.5.1 release [\#137](https://github.com/nubisproject/nubis-jumphost/issues/137)
+
+**Merged pull requests:**
+
+- Merge v1.5.1 release into develop. \[skip ci\] [\#139](https://github.com/nubisproject/nubis-jumphost/pull/139) ([tinnightcap](https://github.com/tinnightcap))
+- Update CHANGELOG for v1.5.1 release \[skip ci\] [\#138](https://github.com/nubisproject/nubis-jumphost/pull/138) ([tinnightcap](https://github.com/tinnightcap))
+
 ## [v1.5.0](https://github.com/nubisproject/nubis-jumphost/tree/v1.5.0) (2017-06-24)
 [Full Changelog](https://github.com/nubisproject/nubis-jumphost/compare/v1.4.2...v1.5.0)
 
