@@ -1,10 +1,25 @@
 # Change Log
 
+## [v2.0.1](https://github.com/nubisproject/nubis-jumphost/tree/v2.0.1) (2017-10-13)
+[Full Changelog](https://github.com/nubisproject/nubis-jumphost/compare/v2.0.0...v2.0.1)
+
+**Closed issues:**
+
+- migrate: ERROR: Unable to associate elastic IP [\#101](https://github.com/nubisproject/nubis-jumphost/issues/101)
+- \[consul\] Expose ssh/jumphost service [\#95](https://github.com/nubisproject/nubis-jumphost/issues/95)
+- Get rid of CloudFormation in startup scripts [\#94](https://github.com/nubisproject/nubis-jumphost/issues/94)
+
 ## [v2.0.0](https://github.com/nubisproject/nubis-jumphost/tree/v2.0.0) (2017-10-05)
 [Full Changelog](https://github.com/nubisproject/nubis-jumphost/compare/v1.5.1...v2.0.0)
 
+**Closed issues:**
+
+- Tag v2.0.0 release [\#143](https://github.com/nubisproject/nubis-jumphost/issues/143)
+
 **Merged pull requests:**
 
+- Merge v2.0.0 release into develop. \[skip ci\] [\#145](https://github.com/nubisproject/nubis-jumphost/pull/145) ([tinnightcap](https://github.com/tinnightcap))
+- Update CHANGELOG for v2.0.0 release \[skip ci\] [\#144](https://github.com/nubisproject/nubis-jumphost/pull/144) ([tinnightcap](https://github.com/tinnightcap))
 - Convert over to Arenas [\#142](https://github.com/nubisproject/nubis-jumphost/pull/142) ([gozer](https://github.com/gozer))
 - Update nubis-travis to v1.4.2 [\#141](https://github.com/nubisproject/nubis-jumphost/pull/141) ([tinnightcap](https://github.com/tinnightcap))
 - Migrate to mozilla slack [\#140](https://github.com/nubisproject/nubis-jumphost/pull/140) ([tinnightcap](https://github.com/tinnightcap))
