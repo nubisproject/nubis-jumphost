@@ -8,7 +8,7 @@ module "image" {
   region = "${var.aws_region}"
   version = "${var.nubis_version}"
   project = "nubis-jumphost"
-  os = "amazon-linux"
+  os = "centos"
 }
 
 resource "aws_eip" "jumphost" {
