@@ -200,6 +200,11 @@ resource "aws_autoscaling_group" "jumphost" {
     propagate_at_launch = true
   }
   tag {
+    key = "Arena"
+    value = "${var.arenas[count.index]}"
+    propagate_at_launch = true
+  }
+  tag {
     key = "TechnicalContact"
     value = "${var.technical_contact}"
     propagate_at_launch = true
