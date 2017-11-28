@@ -8,7 +8,7 @@ module "image" {
   region = "${var.aws_region}"
   version = "${var.nubis_version}"
   project = "nubis-jumphost"
-  os = "amazon-linux"
+  os = "centos"
 }
 
 resource "aws_eip" "jumphost" {
@@ -197,6 +197,11 @@ resource "aws_autoscaling_group" "jumphost" {
   tag {
     key = "ServiceName"
     value = "${var.project}"
+    propagate_at_launch = true
+  }
+  tag {
+    key = "Arena"
+    value = "${var.arenas[count.index]}"
     propagate_at_launch = true
   }
   tag {
