@@ -25,10 +25,6 @@ variable project {
   default = "jumphost"
 }
 
-variable purpose {
-  default = "jumphost"
-}
-
 variable nubis_sudo_groups {
   default = "nubis_global_admins"
 }

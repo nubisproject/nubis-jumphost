@@ -150,7 +150,6 @@ NUBIS_PROJECT=${var.project}
 NUBIS_ARENA=${var.arenas[count.index]}
 NUBIS_ACCOUNT=${var.service_name}
 NUBIS_DOMAIN=${var.nubis_domain}
-NUBIS_PURPOSE=${var.purpose}
 NUBIS_JUMPHOST_EIP=${element(aws_eip.jumphost.*.id,count.index)}
 NUBIS_SUDO_GROUPS="${var.nubis_sudo_groups}"
 NUBIS_USER_GROUPS="${var.nubis_user_groups}"
