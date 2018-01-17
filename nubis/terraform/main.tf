@@ -209,11 +209,4 @@ resource "aws_autoscaling_group" "jumphost" {
     value = "${var.technical_contact}"
     propagate_at_launch = true
   }
-
-  tag {
-    key = "Purpose"
-    value = "${var.purpose}"
-    propagate_at_launch = true
-  }
-
 }
