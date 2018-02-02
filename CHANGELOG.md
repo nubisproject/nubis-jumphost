@@ -1,5 +1,44 @@
 # Change Log
 
+## [v2.1.0](https://github.com/nubisproject/nubis-jumphost/tree/v2.1.0) (2018-02-02)
+[Full Changelog](https://github.com/nubisproject/nubis-jumphost/compare/v2.0.4...v2.1.0)
+
+**Closed issues:**
+
+- purpose is redundant for jumphost [\#162](https://github.com/nubisproject/nubis-jumphost/issues/162)
+- Make sure firewalld doesn't get in the way [\#160](https://github.com/nubisproject/nubis-jumphost/issues/160)
+
+**Merged pull requests:**
+
+- Remove missed purpose tag [\#164](https://github.com/nubisproject/nubis-jumphost/pull/164) ([gozer](https://github.com/gozer))
+- Remove redundant purpose [\#163](https://github.com/nubisproject/nubis-jumphost/pull/163) ([gozer](https://github.com/gozer))
+- When installing fail2ban, make sure to keep firewalled in permissive mode [\#161](https://github.com/nubisproject/nubis-jumphost/pull/161) ([gozer](https://github.com/gozer))
+- \[discuss\] Expose jumphost purpose [\#159](https://github.com/nubisproject/nubis-jumphost/pull/159) ([limed](https://github.com/limed))
+
+## [v2.0.4](https://github.com/nubisproject/nubis-jumphost/tree/v2.0.4) (2017-12-08)
+[Full Changelog](https://github.com/nubisproject/nubis-jumphost/compare/v2.0.3...v2.0.4)
+
+**Closed issues:**
+
+- Tag v2.0.4 release [\#158](https://github.com/nubisproject/nubis-jumphost/issues/158)
+
+**Merged pull requests:**
+
+- Don't include hostname part of tcp check [\#156](https://github.com/nubisproject/nubis-jumphost/pull/156) ([gozer](https://github.com/gozer))
+- \[Centenial\] [\#155](https://github.com/nubisproject/nubis-jumphost/pull/155) ([gozer](https://github.com/gozer))
+
+## [v2.0.3](https://github.com/nubisproject/nubis-jumphost/tree/v2.0.3) (2017-11-02)
+[Full Changelog](https://github.com/nubisproject/nubis-jumphost/compare/v2.0.2...v2.0.3)
+
+**Closed issues:**
+
+- Tag v2.0.3 release [\#152](https://github.com/nubisproject/nubis-jumphost/issues/152)
+
+**Merged pull requests:**
+
+- Merge v2.0.3 release into develop. \[skip ci\] [\#154](https://github.com/nubisproject/nubis-jumphost/pull/154) ([tinnightcap](https://github.com/tinnightcap))
+- Update CHANGELOG for v2.0.3 release \[skip ci\] [\#153](https://github.com/nubisproject/nubis-jumphost/pull/153) ([tinnightcap](https://github.com/tinnightcap))
+
 ## [v2.0.2](https://github.com/nubisproject/nubis-jumphost/tree/v2.0.2) (2017-10-24)
 [Full Changelog](https://github.com/nubisproject/nubis-jumphost/compare/v2.0.1...v2.0.2)
 
