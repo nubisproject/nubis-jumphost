@@ -7,9 +7,12 @@
 
 - purpose is redundant for jumphost [\#162](https://github.com/nubisproject/nubis-jumphost/issues/162)
 - Make sure firewalld doesn't get in the way [\#160](https://github.com/nubisproject/nubis-jumphost/issues/160)
+- Tag v2.1.0 release [\#165](https://github.com/nubisproject/nubis-jumphost/issues/165)
 
 **Merged pull requests:**
 
+- Update CHANGELOG for v2.1.0 release \[skip ci\] [\#167](https://github.com/nubisproject/nubis-jumphost/pull/167) ([nubis-automation](https://github.com/nubis-automation))
+- Update CHANGELOG for v2.1.0 release \[skip ci\] [\#166](https://github.com/nubisproject/nubis-jumphost/pull/166) ([nubis-automation](https://github.com/nubis-automation))
 - Remove missed purpose tag [\#164](https://github.com/nubisproject/nubis-jumphost/pull/164) ([gozer](https://github.com/gozer))
 - Remove redundant purpose [\#163](https://github.com/nubisproject/nubis-jumphost/pull/163) ([gozer](https://github.com/gozer))
 - When installing fail2ban, make sure to keep firewalled in permissive mode [\#161](https://github.com/nubisproject/nubis-jumphost/pull/161) ([gozer](https://github.com/gozer))
