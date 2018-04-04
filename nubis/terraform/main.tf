@@ -3,12 +3,12 @@ provider "aws" {
 }
 
 module "image" {
-  source = "github.com/nubisproject/nubis-terraform//images?ref=develop"
+  source = "github.com/nubisproject/nubis-terraform///images?ref=develop"
 
-  region  = "${var.aws_region}"
-  version = "${var.nubis_version}"
-  project = "nubis-jumphost"
-  os      = "centos"
+  region        = "${var.aws_region}"
+  image_version = "${var.nubis_version}"
+  project       = "nubis-jumphost"
+  os            = "centos"
 }
 
 resource "aws_eip" "jumphost" {
