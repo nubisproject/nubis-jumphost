@@ -1,16 +1,38 @@
 # Change Log
 
-## [v2.1.0](https://github.com/nubisproject/nubis-jumphost/tree/v2.1.0) (2018-02-02)
+## [v2.2.0](https://github.com/nubisproject/nubis-jumphost/tree/v2.2.0) (2018-04-06)
+[Full Changelog](https://github.com/nubisproject/nubis-jumphost/compare/v2.1.0...v2.2.0)
+
+**Closed issues:**
+
+- \[TF\] Cleanup for 0.11.x [\#178](https://github.com/nubisproject/nubis-jumphost/issues/178)
+- Tag project as a platform component [\#175](https://github.com/nubisproject/nubis-jumphost/issues/175)
+- Linting [\#174](https://github.com/nubisproject/nubis-jumphost/issues/174)
+- Use nubis-terraform/images for image search [\#172](https://github.com/nubisproject/nubis-jumphost/issues/172)
+- Expose purpose for jumphost [\#157](https://github.com/nubisproject/nubis-jumphost/issues/157)
+
+**Merged pull requests:**
+
+- Fix \#178 [\#179](https://github.com/nubisproject/nubis-jumphost/pull/179) ([gozer](https://github.com/gozer))
+- Tag project as platform [\#177](https://github.com/nubisproject/nubis-jumphost/pull/177) ([limed](https://github.com/limed))
+- Linting project [\#176](https://github.com/nubisproject/nubis-jumphost/pull/176) ([limed](https://github.com/limed))
+- Use nubis-terraform as the source for iamge search [\#173](https://github.com/nubisproject/nubis-jumphost/pull/173) ([limed](https://github.com/limed))
+- Update to nubis-travis v1.4.2 [\#171](https://github.com/nubisproject/nubis-jumphost/pull/171) ([tinnightcap](https://github.com/tinnightcap))
+
+## [v2.1.0](https://github.com/nubisproject/nubis-jumphost/tree/v2.1.0) (2018-02-07)
 [Full Changelog](https://github.com/nubisproject/nubis-jumphost/compare/v2.0.4...v2.1.0)
 
 **Closed issues:**
 
 - purpose is redundant for jumphost [\#162](https://github.com/nubisproject/nubis-jumphost/issues/162)
 - Make sure firewalld doesn't get in the way [\#160](https://github.com/nubisproject/nubis-jumphost/issues/160)
+- Tag v2.1.0 release [\#168](https://github.com/nubisproject/nubis-jumphost/issues/168)
 - Tag v2.1.0 release [\#165](https://github.com/nubisproject/nubis-jumphost/issues/165)
 
 **Merged pull requests:**
 
+- Update CHANGELOG for v2.1.0 release \[skip ci\] [\#170](https://github.com/nubisproject/nubis-jumphost/pull/170) ([nubis-automation](https://github.com/nubis-automation))
+- Update CHANGELOG for v2.1.0 release \[skip ci\] [\#169](https://github.com/nubisproject/nubis-jumphost/pull/169) ([nubis-automation](https://github.com/nubis-automation))
 - Update CHANGELOG for v2.1.0 release \[skip ci\] [\#167](https://github.com/nubisproject/nubis-jumphost/pull/167) ([nubis-automation](https://github.com/nubis-automation))
 - Update CHANGELOG for v2.1.0 release \[skip ci\] [\#166](https://github.com/nubisproject/nubis-jumphost/pull/166) ([nubis-automation](https://github.com/nubis-automation))
 - Remove missed purpose tag [\#164](https://github.com/nubisproject/nubis-jumphost/pull/164) ([gozer](https://github.com/gozer))
