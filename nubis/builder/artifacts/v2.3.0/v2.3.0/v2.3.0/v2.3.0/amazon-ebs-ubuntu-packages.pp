@@ -38,7 +38,7 @@ package { 'awscli':
   ensure => '1.11.13-1ubuntu1~16.04.0',
 }
 package { 'base-files':
-  ensure => '9.4ubuntu4.7',
+  ensure => '9.4ubuntu4.6',
 }
 package { 'base-passwd':
   ensure => '3.5.39',
@@ -62,10 +62,10 @@ package { 'binutils':
   ensure => '2.26.1-1ubuntu1~16.04.6',
 }
 package { 'boto3':
-  ensure => '1.7.62',
+  ensure => '1.7.58',
 }
 package { 'botocore':
-  ensure => '1.10.62',
+  ensure => '1.10.58',
 }
 package { 'bsd-mailx':
   ensure => '8.1.2-0.20160123cvs-2',
@@ -1163,13 +1163,13 @@ package { 'libyaml-0-2':
   ensure => '0.1.6-3',
 }
 package { 'linux-aws':
-  ensure => '4.4.0.1063.65',
+  ensure => '4.4.0.1062.64',
 }
 package { 'linux-aws-headers-4.4.0-1061':
   ensure => '4.4.0-1061.70',
 }
-package { 'linux-aws-headers-4.4.0-1063':
-  ensure => '4.4.0-1063.72',
+package { 'linux-aws-headers-4.4.0-1062':
+  ensure => '4.4.0-1062.71',
 }
 package { 'linux-base':
   ensure => '4.5ubuntu1~16.04.1',
@@ -1177,23 +1177,23 @@ package { 'linux-base':
 package { 'linux-headers-4.4.0-1061-aws':
   ensure => '4.4.0-1061.70',
 }
-package { 'linux-headers-4.4.0-1063-aws':
-  ensure => '4.4.0-1063.72',
+package { 'linux-headers-4.4.0-1062-aws':
+  ensure => '4.4.0-1062.71',
 }
 package { 'linux-headers-aws':
-  ensure => '4.4.0.1063.65',
+  ensure => '4.4.0.1062.64',
 }
 package { 'linux-image-4.4.0-1061-aws':
   ensure => '4.4.0-1061.70',
 }
-package { 'linux-image-4.4.0-1063-aws':
-  ensure => '4.4.0-1063.72',
+package { 'linux-image-4.4.0-1062-aws':
+  ensure => '4.4.0-1062.71',
 }
 package { 'linux-image-aws':
-  ensure => '4.4.0.1063.65',
+  ensure => '4.4.0.1062.64',
 }
 package { 'linux-libc-dev':
-  ensure => '4.4.0-131.157',
+  ensure => '4.4.0-130.156',
 }
 package { 'locale':
   ensure => ['2.1.2'],
@@ -1439,7 +1439,7 @@ package { 'python-all-dev':
   ensure => '2.7.12-1~16.04',
 }
 package { 'python-apt-common':
-  ensure => '1.1.0~beta1ubuntu0.16.04.2',
+  ensure => '1.1.0~beta1ubuntu0.16.04.1',
 }
 package { 'python-dateutil':
   ensure => '2.7.3',
@@ -1481,7 +1481,7 @@ package { 'python3-apport':
   ensure => '2.20.1-0ubuntu2.18',
 }
 package { 'python3-apt':
-  ensure => '1.1.0~beta1ubuntu0.16.04.2',
+  ensure => '1.1.0~beta1ubuntu0.16.04.1',
 }
 package { 'python3-blinker':
   ensure => '1.3.dfsg2-1build1',
@@ -1730,7 +1730,7 @@ package { 'six':
   ensure => '1.11.0',
 }
 package { 'snapd':
-  ensure => '2.33.1ubuntu2',
+  ensure => '2.32.9',
 }
 package { 'software-properties-common':
   ensure => '0.96.20.7',
@@ -1805,7 +1805,7 @@ package { 'ubuntu-cloudimage-keyring':
   ensure => '2013.11.11',
 }
 package { 'ubuntu-core-launcher':
-  ensure => '2.33.1ubuntu2',
+  ensure => '2.32.9',
 }
 package { 'ubuntu-keyring':
   ensure => '2012.05.19',
