@@ -1,11 +1,12 @@
 # Change Log
 
-## [v2.3.0](https://github.com/nubisproject/nubis-jumphost/tree/v2.3.0) (2018-07-20)
+## [v2.3.0](https://github.com/nubisproject/nubis-jumphost/tree/v2.3.0) (2018-07-24)
 [Full Changelog](https://github.com/nubisproject/nubis-jumphost/compare/v2.2.0...v2.3.0)
 
 **Closed issues:**
 
 - Tag v2.2.0 release [\#180](https://github.com/nubisproject/nubis-jumphost/issues/180)
+- Tag v2.3.0 release [\#196](https://github.com/nubisproject/nubis-jumphost/issues/196)
 - Tag v2.3.0 release [\#193](https://github.com/nubisproject/nubis-jumphost/issues/193)
 - Tag v2.3.0 release [\#190](https://github.com/nubisproject/nubis-jumphost/issues/190)
 - Tag v2.3.0 release [\#187](https://github.com/nubisproject/nubis-jumphost/issues/187)
@@ -13,6 +14,8 @@
 
 **Merged pull requests:**
 
+- Update CHANGELOG for v2.3.0 release \[skip ci\] [\#198](https://github.com/nubisproject/nubis-jumphost/pull/198) ([nubis-automation](https://github.com/nubis-automation))
+- Update CHANGELOG for v2.3.0 release \[skip ci\] [\#197](https://github.com/nubisproject/nubis-jumphost/pull/197) ([nubis-automation](https://github.com/nubis-automation))
 - Update CHANGELOG for v2.3.0 release \[skip ci\] [\#195](https://github.com/nubisproject/nubis-jumphost/pull/195) ([nubis-automation](https://github.com/nubis-automation))
 - Update CHANGELOG for v2.3.0 release \[skip ci\] [\#194](https://github.com/nubisproject/nubis-jumphost/pull/194) ([nubis-automation](https://github.com/nubis-automation))
 - Update CHANGELOG for v2.3.0 release \[skip ci\] [\#192](https://github.com/nubisproject/nubis-jumphost/pull/192) ([nubis-automation](https://github.com/nubis-automation))
