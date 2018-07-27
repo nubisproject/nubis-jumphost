@@ -89,10 +89,10 @@ package { 'boto':
   ensure => '2.45.0',
 }
 package { 'boto3':
-  ensure => '1.7.62',
+  ensure => '1.7.58',
 }
 package { 'botocore':
-  ensure => '1.10.62',
+  ensure => '1.10.58',
 }
 package { 'btrfs-progs':
   ensure => '4.9.1-1.el7',
@@ -521,13 +521,13 @@ package { 'kernel':
   ensure => '3.10.0-514.16.1.el7',
 }
 package { 'kernel-headers':
-  ensure => '3.10.0-862.9.1.el7',
+  ensure => '3.10.0-862.6.3.el7',
 }
 package { 'kernel-tools':
-  ensure => '3.10.0-862.9.1.el7',
+  ensure => '3.10.0-862.6.3.el7',
 }
 package { 'kernel-tools-libs':
-  ensure => '3.10.0-862.9.1.el7',
+  ensure => '3.10.0-862.6.3.el7',
 }
 package { 'kexec-tools':
   ensure => '2.0.15-13.el7',
@@ -1220,7 +1220,7 @@ package { 'python-markupsafe':
   ensure => '0.11-10.el7',
 }
 package { 'python-perf':
-  ensure => '3.10.0-862.9.1.el7',
+  ensure => '3.10.0-862.6.3.el7',
 }
 package { 'python-pillow':
   ensure => '2.0.0-19.gitd1c6db8.el7',
