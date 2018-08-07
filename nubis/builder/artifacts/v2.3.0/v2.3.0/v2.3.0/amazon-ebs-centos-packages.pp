@@ -89,10 +89,10 @@ package { 'boto':
   ensure => '2.45.0',
 }
 package { 'boto3':
-  ensure => '1.7.65',
+  ensure => '1.7.67',
 }
 package { 'botocore':
-  ensure => '1.10.65',
+  ensure => '1.10.67',
 }
 package { 'btrfs-progs':
   ensure => '4.9.1-1.el7',

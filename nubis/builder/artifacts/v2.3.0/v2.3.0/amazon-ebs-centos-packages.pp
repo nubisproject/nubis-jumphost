@@ -89,10 +89,10 @@ package { 'boto':
   ensure => '2.45.0',
 }
 package { 'boto3':
-  ensure => '1.7.67',
+  ensure => '1.7.71',
 }
 package { 'botocore':
-  ensure => '1.10.67',
+  ensure => '1.10.71',
 }
 package { 'btrfs-progs':
   ensure => '4.9.1-1.el7',
@@ -107,7 +107,7 @@ package { 'centos-logos':
   ensure => '70.0.6-3.el7.centos',
 }
 package { 'centos-release':
-  ensure => '7-5.1804.el7.centos.2',
+  ensure => '7-5.1804.1.el7.centos',
 }
 package { 'cffi':
   ensure => '1.6.0',
@@ -812,7 +812,7 @@ package { 'mariadb-libs':
   ensure => '1:5.5.56-2.el7',
 }
 package { 'microcode_ctl':
-  ensure => '2:2.1-29.2.el7_5',
+  ensure => '2:2.1-29.10.el7_5',
 }
 package { 'mig-agent':
   ensure => '20160715_0.a06734a.prod-1',
@@ -1547,10 +1547,10 @@ package { 'yum-metadata-parser':
   ensure => '1.1.4-10.el7',
 }
 package { 'yum-plugin-fastestmirror':
-  ensure => '1.1.31-45.el7',
+  ensure => '1.1.31-46.el7_5',
 }
 package { 'yum-utils':
-  ensure => '1.1.31-45.el7',
+  ensure => '1.1.31-46.el7_5',
 }
 package { 'zlib':
   ensure => '1.2.7-17.el7',
