@@ -1,0 +1,37 @@
+{
+  "builds": [
+    {
+      "name": "amazon-ebs-ubuntu",
+      "builder_type": "amazon-ebs",
+      "build_time": 1534867685,
+      "files": null,
+      "artifact_id": "ap-northeast-1:ami-004c91690d2a8c32d,ap-northeast-2:ami-0103bca8d4f710980,ap-southeast-1:ami-0802e5aef719dea1e,ap-southeast-2:ami-02631733c9c49cb79,eu-central-1:ami-00e9351e25947c8c5,eu-west-1:ami-024adc819edd48742,sa-east-1:ami-0622a5cc6303a7ce3,us-east-1:ami-0e0130b8f7cf5055c,us-west-1:ami-007aecb9e356a984c,us-west-2:ami-078643af70cd25cd7",
+      "packer_run_uuid": "3b7d0abe-6840-8cb4-4414-d0879ea457ac"
+    },
+    {
+      "name": "amazon-ebs-centos",
+      "builder_type": "amazon-ebs",
+      "build_time": 1534867954,
+      "files": null,
+      "artifact_id": "ap-northeast-1:ami-0201f52470ae0b794,ap-northeast-2:ami-02462b02f02fe1766,ap-southeast-1:ami-0fa35ae3e13f6227e,ap-southeast-2:ami-010a39a1021a1a9cd,eu-central-1:ami-0e4714efd95349fcf,eu-west-1:ami-0e4db3f5d12ef6350,sa-east-1:ami-0a3a0c137fb5e89a0,us-east-1:ami-0eebaa1d88c6dfd32,us-west-1:ami-0a7f522ac02c0960a,us-west-2:ami-02590d5105cda52f6",
+      "packer_run_uuid": "3b7d0abe-6840-8cb4-4414-d0879ea457ac"
+    },
+    {
+      "name": "amazon-ebs-ubuntu",
+      "builder_type": "amazon-ebs",
+      "build_time": 1534875864,
+      "files": null,
+      "artifact_id": "ap-northeast-1:ami-099a58f0121dcb0f1,ap-northeast-2:ami-0fd8bac8062927f22,ap-southeast-1:ami-096faff3a56218e47,ap-southeast-2:ami-093e304f1cc45db7f,eu-central-1:ami-0edda7a3e4a2bd673,eu-west-1:ami-0a94d8b075d607e50,sa-east-1:ami-0980ad5a4a4d0551f,us-east-1:ami-07c2e3f8eb6ebd7c8,us-west-1:ami-07460640676f43e27,us-west-2:ami-04cfe33324bd7124a",
+      "packer_run_uuid": "d3e3bbdd-2f42-2a66-93dd-f54b8c72da77"
+    },
+    {
+      "name": "amazon-ebs-centos",
+      "builder_type": "amazon-ebs",
+      "build_time": 1534876237,
+      "files": null,
+      "artifact_id": "ap-northeast-1:ami-0b067ef71657acc98,ap-northeast-2:ami-0c9845de18f9789c8,ap-southeast-1:ami-03acd4fc7096a6a30,ap-southeast-2:ami-043ee3d721dbcb223,eu-central-1:ami-07a3acec3361edbb0,eu-west-1:ami-0da8422ba071fd067,sa-east-1:ami-0b2822f3d00762f62,us-east-1:ami-07e39b349a1894393,us-west-1:ami-0855d981c3f5ff1e1,us-west-2:ami-02fc2a09e0ca26c30",
+      "packer_run_uuid": "d3e3bbdd-2f42-2a66-93dd-f54b8c72da77"
+    }
+  ],
+  "last_run_uuid": "d3e3bbdd-2f42-2a66-93dd-f54b8c72da77"
+}
