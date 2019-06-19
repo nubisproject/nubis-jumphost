@@ -1,21 +1,23 @@
 # Change Log
 
+## [v2.4.2](https://github.com/nubisproject/nubis-jumphost/tree/v2.4.2) (2019-06-19)
+[Full Changelog](https://github.com/nubisproject/nubis-jumphost/compare/v2.4.0...v2.4.2)
+
+**Closed issues:**
+
+- Tag v2.4.0 release [\#220](https://github.com/nubisproject/nubis-jumphost/issues/220)
+
 ## [v2.4.0](https://github.com/nubisproject/nubis-jumphost/tree/v2.4.0) (2019-03-06)
-[Full Changelog](https://github.com/nubisproject/nubis-jumphost/compare/v2.4.0...v2.4.0)
+[Full Changelog](https://github.com/nubisproject/nubis-jumphost/compare/v2.3.1...v2.4.0)
 
 **Closed issues:**
 
 - Tag v2.4.0 release [\#217](https://github.com/nubisproject/nubis-jumphost/issues/217)
 
-## [v2.4.0](https://github.com/nubisproject/nubis-jumphost/tree/v2.4.0) (2019-02-23)
-[Full Changelog](https://github.com/nubisproject/nubis-jumphost/compare/v2.3.1...v2.4.0)
-
-**Closed issues:**
-
-- Tag v2.3.1 release [\#214](https://github.com/nubisproject/nubis-jumphost/issues/214)
-
 **Merged pull requests:**
 
+- Update CHANGELOG for v2.4.0 release \[skip ci\] [\#222](https://github.com/nubisproject/nubis-jumphost/pull/222) ([nubis-automation](https://github.com/nubis-automation))
+- Update CHANGELOG for v2.4.0 release \[skip ci\] [\#221](https://github.com/nubisproject/nubis-jumphost/pull/221) ([nubis-automation](https://github.com/nubis-automation))
 - Update CHANGELOG for v2.4.0 release \[skip ci\] [\#219](https://github.com/nubisproject/nubis-jumphost/pull/219) ([nubis-automation](https://github.com/nubis-automation))
 - Update CHANGELOG for v2.4.0 release \[skip ci\] [\#218](https://github.com/nubisproject/nubis-jumphost/pull/218) ([nubis-automation](https://github.com/nubis-automation))
 
@@ -24,20 +26,22 @@
 
 **Closed issues:**
 
-- Tag v2.3.0 release [\#208](https://github.com/nubisproject/nubis-jumphost/issues/208)
+- Tag v2.3.1 release [\#214](https://github.com/nubisproject/nubis-jumphost/issues/214)
 - Tag v2.3.1 release [\#211](https://github.com/nubisproject/nubis-jumphost/issues/211)
 
 **Merged pull requests:**
 
+- Update CHANGELOG for v2.3.1 release \[skip ci\] [\#216](https://github.com/nubisproject/nubis-jumphost/pull/216) ([nubis-automation](https://github.com/nubis-automation))
+- Update CHANGELOG for v2.3.1 release \[skip ci\] [\#215](https://github.com/nubisproject/nubis-jumphost/pull/215) ([nubis-automation](https://github.com/nubis-automation))
 - Update CHANGELOG for v2.3.1 release \[skip ci\] [\#213](https://github.com/nubisproject/nubis-jumphost/pull/213) ([nubis-automation](https://github.com/nubis-automation))
 - Update CHANGELOG for v2.3.1 release \[skip ci\] [\#212](https://github.com/nubisproject/nubis-jumphost/pull/212) ([nubis-automation](https://github.com/nubis-automation))
 
-## [v2.3.0](https://github.com/nubisproject/nubis-jumphost/tree/v2.3.0) (2018-08-01)
+## [v2.3.0](https://github.com/nubisproject/nubis-jumphost/tree/v2.3.0) (2018-08-07)
 [Full Changelog](https://github.com/nubisproject/nubis-jumphost/compare/v2.2.0...v2.3.0)
 
 **Closed issues:**
 
-- Tag v2.2.0 release [\#180](https://github.com/nubisproject/nubis-jumphost/issues/180)
+- Tag v2.3.0 release [\#208](https://github.com/nubisproject/nubis-jumphost/issues/208)
 - Tag v2.3.0 release [\#205](https://github.com/nubisproject/nubis-jumphost/issues/205)
 - Tag v2.3.0 release [\#202](https://github.com/nubisproject/nubis-jumphost/issues/202)
 - Tag v2.3.0 release [\#199](https://github.com/nubisproject/nubis-jumphost/issues/199)
@@ -49,6 +53,8 @@
 
 **Merged pull requests:**
 
+- Update CHANGELOG for v2.3.0 release \[skip ci\] [\#210](https://github.com/nubisproject/nubis-jumphost/pull/210) ([nubis-automation](https://github.com/nubis-automation))
+- Update CHANGELOG for v2.3.0 release \[skip ci\] [\#209](https://github.com/nubisproject/nubis-jumphost/pull/209) ([nubis-automation](https://github.com/nubis-automation))
 - Update CHANGELOG for v2.3.0 release \[skip ci\] [\#207](https://github.com/nubisproject/nubis-jumphost/pull/207) ([nubis-automation](https://github.com/nubis-automation))
 - Update CHANGELOG for v2.3.0 release \[skip ci\] [\#206](https://github.com/nubisproject/nubis-jumphost/pull/206) ([nubis-automation](https://github.com/nubis-automation))
 - Update CHANGELOG for v2.3.0 release \[skip ci\] [\#204](https://github.com/nubisproject/nubis-jumphost/pull/204) ([nubis-automation](https://github.com/nubis-automation))
@@ -89,6 +95,10 @@
 
 ## [v2.1.0](https://github.com/nubisproject/nubis-jumphost/tree/v2.1.0) (2018-02-07)
 [Full Changelog](https://github.com/nubisproject/nubis-jumphost/compare/v2.0.4...v2.1.0)
+
+**Implemented enhancements:**
+
+- \#bastionsshkeys  - bastion host ssh keys are managed manually [\#46](https://github.com/nubisproject/nubis-jumphost/issues/46)
 
 **Closed issues:**
 
@@ -432,6 +442,7 @@
 - Default VPC subnetlocation to public [\#3](https://github.com/nubisproject/nubis-jumphost/pull/3) ([limed](https://github.com/limed))
 - Add StacksVersion argument, helps along nubisproject/nubis-stacks\#41 [\#2](https://github.com/nubisproject/nubis-jumphost/pull/2) ([gozer](https://github.com/gozer))
 - Example [\#1](https://github.com/nubisproject/nubis-jumphost/pull/1) ([gozer](https://github.com/gozer))
+
 
 
 \* *This Change Log was automatically generated by [github_changelog_generator](https://github.com/skywinder/Github-Changelog-Generator)*
